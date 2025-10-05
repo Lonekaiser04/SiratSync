@@ -69,7 +69,7 @@
             padding: 0 20px;
         }
 
-        /* Header Styles */
+        /* Header Styles - Fixed for mobile */
         header {
             background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -77,13 +77,13 @@
             width: 100%;
             z-index: 1000;
             transition: all 0.3s ease;
+            padding: 10px 0;
         }
 
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
         }
 
         .logo {
@@ -91,7 +91,7 @@
             align-items: center;
             gap: 10px;
             font-weight: 700;
-            font-size: 24px;
+            font-size: 20px;
             color: var(--emerald);
             text-decoration: none;
         }
@@ -137,6 +137,10 @@
             font-size: 24px;
             cursor: pointer;
             color: var(--emerald);
+            background: none;
+            border: none;
+            padding: 5px;
+            z-index: 1001;
         }
 
         /* Hero Section */
@@ -939,7 +943,7 @@
             animation: fadeIn 0.5s ease forwards;
         }
 
-        /* Responsive Styles */
+        /* Responsive Styles - Updated for mobile */
         @media (max-width: 1200px) {
             .container {
                 max-width: 1000px;
@@ -977,23 +981,37 @@
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
-                position: absolute;
-                top: 70px;
+                position: fixed;
+                top: 0;
                 left: 0;
                 width: 100%;
+                height: 100vh;
                 background-color: var(--white);
                 flex-direction: column;
-                padding: 20px;
+                padding: 80px 20px 20px;
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
                 z-index: 100;
+                overflow-y: auto;
             }
             
             .nav-links.active {
                 display: flex;
             }
             
+            .nav-links a {
+                padding: 15px 0;
+                font-size: 18px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+            
             .mobile-menu {
                 display: block;
+                position: relative;
+                z-index: 101;
+            }
+            
+            .mobile-menu.active i::before {
+                content: "\f00d"; /* FontAwesome X icon */
             }
             
             .hero-text h1 {
@@ -1023,6 +1041,10 @@
             
             .download-section {
                 padding: 60px 0;
+            }
+            
+            header {
+                padding: 10px 0;
             }
         }
 
@@ -1057,6 +1079,10 @@
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
+            
+            .logo {
+                font-size: 18px;
+            }
         }
 
         @media (max-width: 400px) {
@@ -1090,9 +1116,9 @@
                 <a href="#testimonials">Testimonials</a>
                 <a href="#download">Download</a>
             </nav>
-            <div class="mobile-menu">
+            <button class="mobile-menu">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
         </div>
     </header>
 
@@ -1111,7 +1137,7 @@
                         <i class="fab fa-apple"></i>
                         App Store
                     </a>
-                    <a href ="https://drive.google.com/uc?export=download&id=1u1R6w7U8pJVJVthi9bj6fGvSRsYatLOE" class="btn btn-secondary">
+                    <a href="https://drive.google.com/uc?export=download&id=1u1R6w7U8pJVJVthi9bj6fGvSRsYatLOE" class="btn btn-secondary" id="direct-apk-link">
                         <i class="fas fa-download"></i>
                         Direct APK
                     </a>
@@ -1712,7 +1738,7 @@
                         <i class="fab fa-apple"></i>
                         Download on App Store
                     </a>
-                    <a href="https://drive.google.com/uc?export=download&id=1u1R6w7U8pJVJVthi9bj6fGvSRsYatLOE" class="btn btn-secondary">
+                    <a href="https://drive.google.com/uc?export=download&id=1u1R6w7U8pJVJVthi9bj6fGvSRsYatLOE" class="btn btn-secondary" id="download-apk-link">
                         <i class="fas fa-download"></i>
                         Direct APK Download
                     </a>
@@ -1778,7 +1804,17 @@
         // Mobile Menu Toggle
         document.querySelector('.mobile-menu').addEventListener('click', function() {
             const navLinks = document.querySelector('.nav-links');
+            const mobileMenu = document.querySelector('.mobile-menu');
             navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.remove('active');
+                document.querySelector('.mobile-menu').classList.remove('active');
+            });
         });
 
         // App Navigation Tabs
@@ -1855,10 +1891,8 @@
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
                 header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-                header.style.padding = '10px 0';
             } else {
                 header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
-                header.style.padding = '15px 0';
             }
         });
 
@@ -1879,6 +1913,7 @@
                     
                     // Close mobile menu if open
                     document.querySelector('.nav-links').classList.remove('active');
+                    document.querySelector('.mobile-menu').classList.remove('active');
                 }
             });
         });
@@ -1914,7 +1949,17 @@
         // Update time initially and then every minute
         updateTime();
         setInterval(updateTime, 60000);
+
+        // Fix for direct APK link - ensure it's clickable
+        document.getElementById('direct-apk-link').addEventListener('click', function(e) {
+            // Allow the default behavior - the link should work normally
+            console.log('Direct APK link clicked');
+        });
+
+        document.getElementById('download-apk-link').addEventListener('click', function(e) {
+            // Allow the default behavior - the link should work normally
+            console.log('Download APK link clicked');
+        });
     </script>
 </body>
 </html>
-
