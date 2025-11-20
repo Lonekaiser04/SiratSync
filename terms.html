@@ -1,204 +1,389 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terms of Service — SiratSync</title>
-  <meta name="description" content="Terms of Service for SiratSync mobile application. Learn about acceptable use, community guidelines, and user responsibilities." />
-  <style>
-    :root{
-      --bg:#f7f9fb; --card:#ffffff; --muted:#6b7280; --accent:#0f7a4a; --container:1100px;
-      --max-width:900px; --radius:12px; --mono: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    }
-    html,body{height:100%;}
-    body{
-      font-family:var(--mono); background:var(--bg); color:#0b1320; margin:0; -webkit-font-smoothing:antialiased;
-    }
-    .wrap{max-width:var(--container); margin:36px auto; padding:20px;}
-    header.hero{background:linear-gradient(180deg, #ffffff, #f6fbf7); border-radius:14px; padding:28px; box-shadow:0 6px 22px rgba(12,20,16,0.04);}
-    header .title{display:flex; gap:18px; align-items:center}
-    .logo{width:64px; height:64px; border-radius:12px; background:linear-gradient(135deg,#0f7a4a,#055a37); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:20px}
-    h1{font-size:20px; margin:0}
-    p.lead{margin:8px 0 0; color:var(--muted)}
-    .card{background:var(--card); border-radius:12px; padding:22px; margin-top:20px; box-shadow:0 4px 16px rgba(12,20,16,0.04)}
-    h2{font-size:16px; margin-top:0}
-    p{line-height:1.6; color:#111827}
-    ul{margin-left:18px}
-    code{background:#eef2f7; padding:2px 6px; border-radius:6px; font-family:monospace}
-    footer{margin-top:18px; color:var(--muted); font-size:13px}
-    .meta{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px}
-    a{color:var(--accent); text-decoration:none}
-    .small{font-size:13px; color:var(--muted)}
-    .notice{background:#fff8e6; border-left:4px solid #ffd166; padding:10px; border-radius:8px; margin-bottom:12px}
-    .warning{background:#ffe6e6; border-left:4px solid #ff6b6b; padding:10px; border-radius:8px; margin-bottom:12px}
-    @media(max-width:720px){.wrap{margin:18px}} 
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — SiratSync</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #f7f9fb;
+            --card: #ffffff;
+            --muted: #6b7280;
+            --accent: #0f7a4a;
+            --text: #0b1320;
+            --radius: 12px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 100%;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header.hero {
+            background: linear-gradient(180deg, #ffffff, #f6fbf7);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 22px rgba(12, 20, 16, 0.04);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 16px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius);
+            background: linear-gradient(135deg, #0f7a4a, #055a37);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .header-text h1 {
+            font-size: 22px;
+            margin: 0;
+            color: var(--text);
+        }
+
+        .header-text .lead {
+            margin: 4px 0 0;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .intro-text {
+            color: var(--text);
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(12, 20, 16, 0.04);
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        h3 {
+            font-size: 17px;
+            margin: 20px 0 12px;
+            color: var(--text);
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .notice {
+            background: #fff8e6;
+            border-left: 4px solid #ffd166;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .warning {
+            background: #ffe6e6;
+            border-left: 4px solid #ff6b6b;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .credits-section {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .meta {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .meta a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .meta a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 24px;
+            padding: 16px;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 30px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .header-content {
+                margin-bottom: 20px;
+            }
+            
+            .header-text h1 {
+                font-size: 24px;
+            }
+            
+            .card {
+                padding: 28px;
+            }
+            
+            .meta {
+                flex-direction: row;
+                gap: 20px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 40px;
+            }
+            
+            .card {
+                padding: 32px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="hero">
-      <div class="title">
-        <div class="logo">SS</div>
-        <div>
-          <h1>Terms of Service — SiratSync</h1>
-          <p class="lead">Last updated: <strong id="lastUpdated">April 15, 2024</strong></p>
-        </div>
-      </div>
-      <p class="lead">Welcome to SiratSync. By downloading, accessing, or using our mobile application (the "App"), you agree to be bound by these Terms of Service ("Terms"). Please read them carefully.</p>
-    </header>
-    
-    <main>
-      <section class="card">
-        <h2>1. Acceptance of Terms</h2>
-        <p>By creating an account or using SiratSync, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree with any part of these Terms, you must not use the App.</p>
+    <div class="container">
+        <header class="hero">
+            <div class="header-content">
+                <div class="logo">SS</div>
+                <div class="header-text">
+                    <h1>Terms of Service — SiratSync</h1>
+                    <p class="lead">Last updated: <strong>November 20, 2025</strong></p>
+                </div>
+            </div>
+            <p class="intro-text">Welcome to SiratSync. By downloading, accessing, or using our mobile application (the "App"), you agree to be bound by these Terms of Service ("Terms"). Please read them carefully.</p>
+        </header>
 
-        <div class="notice">
-          <strong>Important:</strong> These Terms constitute a legally binding agreement between you and SiratSync. We recommend saving or printing a copy for your records.
-        </div>
+        <main>
+            <section class="card">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By creating an account or using SiratSync, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree with any part of these Terms, you must not use the App.</p>
 
-        <h2>2. Use of the App</h2>
-        <p>SiratSync grants you a limited, non-exclusive, non-transferable, revocable license to use the App for personal, non-commercial purposes in accordance with these Terms.</p>
-        
-        <p>You agree to use SiratSync responsibly and respectfully. You must not:</p>
-        <ul>
-          <li>Misuse, hack, exploit, or attempt to gain unauthorized access to the App, its systems, or other users' accounts</li>
-          <li>Upload, post, or transmit any content that is harmful, offensive, defamatory, or illegal</li>
-          <li>Attempt to access data that does not belong to you</li>
-          <li>Reverse engineer, decompile, or disassemble any part of the App</li>
-          <li>Use the App to violate any applicable laws or regulations</li>
-          <li>Interfere with or disrupt the integrity or performance of the App</li>
-        </ul>
+                <div class="notice">
+                    <strong>Important:</strong> These Terms constitute a legally binding agreement between you and SiratSync. We recommend saving or printing a copy for your records.
+                </div>
 
-        <h2>3. Accounts</h2>
-        <h3>Account Creation</h3>
-        <p>You may create an account using Google authentication or email registration. When creating an account, you agree to provide accurate and complete information.</p>
-        
-        <h3>Account Responsibilities</h3>
-        <p>You are solely responsible for:</p>
-        <ul>
-          <li>Maintaining the confidentiality of your password and account information</li>
-          <li>All activities that occur under your account</li>
-          <li>Your community posts and any content you share through the App</li>
-          <li>Keeping your account secure and notifying us immediately of any unauthorized use</li>
-        </ul>
-        
-        <h3>Account Suspension</h3>
-        <p>We reserve the right to suspend or terminate accounts that:</p>
-        <ul>
-          <li>Violate these Terms or our Community Guidelines</li>
-          <li>Spread hate speech, misinformation, or harmful content</li>
-          <li>Share inappropriate, offensive, or illegal content</li>
-          <li>Engage in spam, fraudulent, or abusive behavior</li>
-        </ul>
+                <h2>2. Use of the App</h2>
+                <p>SiratSync grants you a limited, non-exclusive, non-transferable, revocable license to use the App for personal, non-commercial purposes in accordance with these Terms.</p>
+                
+                <p>You agree to use SiratSync responsibly and respectfully. You must not:</p>
+                <ul>
+                    <li>Misuse, hack, exploit, or attempt to gain unauthorized access to the App, its systems, or other users' accounts</li>
+                    <li>Upload, post, or transmit any content that is harmful, offensive, defamatory, or illegal</li>
+                    <li>Attempt to access data that does not belong to you</li>
+                    <li>Reverse engineer, decompile, or disassemble any part of the App</li>
+                    <li>Use the App to violate any applicable laws or regulations</li>
+                    <li>Interfere with or disrupt the integrity or performance of the App</li>
+                </ul>
 
-        <h2>4. Community Feature</h2>
-        <p>The Community feature allows users to share posts, insights, and engage with other members of the SiratSync community.</p>
-        
-        <h3>Content Ownership and License</h3>
-        <p>By posting in the community:</p>
-        <ul>
-          <li>Your posts become publicly visible to other SiratSync users</li>
-          <li>You retain ownership of your original content</li>
-          <li>You grant SiratSync a worldwide, non-exclusive, royalty-free license to display, distribute, and modify your content for the purpose of operating and improving the App</li>
-        </ul>
-        
-        <h3>Prohibited Content</h3>
-        <p>You agree NOT to post any of the following types of content:</p>
-        <ul>
-          <li><strong>Hate speech:</strong> Content that attacks or demeans individuals or groups based on race, ethnicity, religion, gender, sexual orientation, or other protected characteristics</li>
-          <li><strong>Violence:</strong> Threats of violence, glorification of violence, or content that encourages harm</li>
-          <li><strong>Vulgar content:</strong> Obscene, pornographic, or sexually explicit material</li>
-          <li><strong>Political propaganda:</strong> Content primarily intended for political campaigning or recruitment</li>
-          <li><strong>Spam:</strong> Unsolicited commercial content, repetitive posts, or irrelevant links</li>
-          <li><strong>Advertising:</strong> Promotional content for products, services, or other apps without authorization</li>
-          <li><strong>Anti-Islamic content:</strong> Content that disparages Islam, its teachings, or its followers</li>
-          <li><strong>Fake Hadith / misinformation:</strong> Fabricated or unauthenticated religious texts presented as authentic</li>
-          <li><strong>Personal attacks:</strong> Harassment, bullying, or targeted abuse of other users</li>
-          <li><strong>Private information:</strong> Sharing others' personal information without consent</li>
-        </ul>
-        
-        <div class="warning">
-          <strong>Content Moderation:</strong> Posts that violate these rules may be removed without notice. Repeated violations may result in account suspension or termination.
-        </div>
+                <h2>3. Accounts</h2>
+                <h3>Account Creation</h3>
+                <p>You may create an account using Google authentication or email registration. When creating an account, you agree to provide accurate and complete information.</p>
+                
+                <h3>Account Responsibilities</h3>
+                <p>You are solely responsible for:</p>
+                <ul>
+                    <li>Maintaining the confidentiality of your password and account information</li>
+                    <li>All activities that occur under your account</li>
+                    <li>Your community posts and any content you share through the App</li>
+                    <li>Keeping your account secure and notifying us immediately of any unauthorized use</li>
+                </ul>
+                
+                <h3>Account Suspension</h3>
+                <p>We reserve the right to suspend or terminate accounts that:</p>
+                <ul>
+                    <li>Violate these Terms or our Community Guidelines</li>
+                    <li>Spread hate speech, misinformation, or harmful content</li>
+                    <li>Share inappropriate, offensive, or illegal content</li>
+                    <li>Engage in spam, fraudulent, or abusive behavior</li>
+                </ul>
 
-        <h2>5. Intellectual Property</h2>
-        <h3>SiratSync Property</h3>
-        <p>All code, design, branding, user interface, and proprietary technology of SiratSync are the intellectual property of the developer and are protected by copyright and other intellectual property laws.</p>
-        
-        <h3>Islamic Content</h3>
-        <p>Islamic texts including Quran, Hadith, and Duas belong to their respective owners, compilers, and sources. SiratSync uses these texts under appropriate licenses or public domain provisions where applicable.</p>
-        
-        <p>Specific attributions:</p>
-        <ul>
-          <li><strong>Quran:</strong> Arabic text is in the public domain. English translations are used with appropriate attribution to their translators.</li>
-          <li><strong>Hadith:</strong> Collections are sourced from authenticated compilations with proper attribution.</li>
-          <li><strong>Duas:</strong> Supplications are compiled from authentic Islamic sources.</li>
-        </ul>
-        
-        <p>You may not extract, copy, or redistribute substantial portions of our content for commercial purposes without permission.</p>
+                <h2>4. Community Feature</h2>
+                <p>The Community feature allows users to share posts, insights, and engage with other members of the SiratSync community.</p>
+                
+                <h3>Content Ownership and License</h3>
+                <p>By posting in the community:</p>
+                <ul>
+                    <li>Your posts become publicly visible to other SiratSync users</li>
+                    <li>You retain ownership of your original content</li>
+                    <li>You grant SiratSync a worldwide, non-exclusive, royalty-free license to display, distribute, and modify your content for the purpose of operating and improving the App</li>
+                </ul>
+                
+                <h3>Prohibited Content</h3>
+                <p>You agree NOT to post any of the following types of content:</p>
+                <ul>
+                    <li><strong>Hate speech:</strong> Content that attacks or demeans individuals or groups based on race, ethnicity, religion, gender, sexual orientation, or other protected characteristics</li>
+                    <li><strong>Violence:</strong> Threats of violence, glorification of violence, or content that encourages harm</li>
+                    <li><strong>Vulgar content:</strong> Obscene, pornographic, or sexually explicit material</li>
+                    <li><strong>Political propaganda:</strong> Content primarily intended for political campaigning or recruitment</li>
+                    <li><strong>Spam:</strong> Unsolicited commercial content, repetitive posts, or irrelevant links</li>
+                    <li><strong>Advertising:</strong> Promotional content for products, services, or other apps without authorization</li>
+                    <li><strong>Anti-Islamic content:</strong> Content that disparages Islam, its teachings, or its followers</li>
+                    <li><strong>Fake Hadith / misinformation:</strong> Fabricated or unauthenticated religious texts presented as authentic</li>
+                    <li><strong>Personal attacks:</strong> Harassment, bullying, or targeted abuse of other users</li>
+                    <li><strong>Private information:</strong> Sharing others' personal information without consent</li>
+                </ul>
+                
+                <div class="warning">
+                    <strong>Content Moderation:</strong> Posts that violate these rules may be removed without notice. Repeated violations may result in account suspension or termination.
+                </div>
 
-        <h2>6. Disclaimer of Religious Guidance</h2>
-        <p>SiratSync provides Islamic content from authenticated sources to the best of our ability. However, we do not guarantee:</p>
-        <ul>
-          <li>Fiqh rulings or legal interpretations</li>
-          <li>Theological interpretations or explanations</li>
-          <li>Absolute accuracy of translations or contextual understanding</li>
-          <li>Completeness of any content category</li>
-        </ul>
-        
-        <div class="notice">
-          <strong>Important:</strong> SiratSync is an educational and reference tool, not a substitute for qualified religious scholarship. Always consult knowledgeable scholars for specific religious guidance and fatwas.
-        </div>
+                <h2>5. Intellectual Property</h2>
+                <h3>SiratSync Property</h3>
+                <p>All code, design, branding, user interface, and proprietary technology of SiratSync are the intellectual property of the developer and are protected by copyright and other intellectual property laws.</p>
+                
+                <h3>Islamic Content</h3>
+                <p>Islamic texts including Quran, Hadith, and Duas belong to their respective owners, compilers, and sources. SiratSync uses these texts under appropriate licenses or public domain provisions where applicable.</p>
+                
+                <div class="credits-section">
+                    <h3>Dataset Credits & Attributions</h3>
+                    
+                    <h4>Quran Dataset Credits:</h4>
+                    <ul>
+                        <li><strong>Quran Arabic Text:</strong> Public domain – no copyright.</li>
+                        <li><strong>English Translation:</strong> © Umm Muhammad, sourced from Tanzil.net. Licensed under CC BY 3.0 (<a href="https://tanzil.net" target="_blank" rel="noopener">https://tanzil.net</a>).</li>
+                        <li><strong>Quran JSON Structure:</strong> Structured JSON dataset sourced from rn0x/Quran-Data on GitHub. Used respectfully for Islamic educational purposes only.</li>
+                    </ul>
+                    
+                    <h4>Hadith Dataset Credits:</h4>
+                    <ul>
+                        <li>Structured JSON Hadith datasets (Bukhari, Muslim, Tirmidhi, Abu Dawud, Nasa'i, Ibn Majah, Muwatta Malik, Musnad Ahmad, Riyad as-Salihin, and more) sourced from the open Hadith-JSON project by Ahmed Abdelbaset (GitHub: AhmedBaset).</li>
+                        <li>Repository: <a href="https://github.com/AhmedBaset/hadith-json" target="_blank" rel="noopener">https://github.com/AhmedBaset/hadith-json</a></li>
+                        <li>Original texts sourced from Sunnah.com.</li>
+                        <li>All rights belong to original publishers and compilers.</li>
+                        <li>Used respectfully for educational Islamic purposes only.</li>
+                    </ul>
+                    
+                    <h4>Dua Dataset Credits:</h4>
+                    <ul>
+                        <li>Dua dataset © respective creator.</li>
+                        <li>Used for educational Islamic purposes with attribution.</li>
+                    </ul>
+                </div>
+                
+                <p>You may not extract, copy, or redistribute substantial portions of our content for commercial purposes without permission.</p>
 
-        <h2>7. Limitation of Liability</h2>
-        <p>To the fullest extent permitted by law, SiratSync and its developers shall not be responsible for:</p>
-        <ul>
-          <li>Any device issues, malfunctions, or compatibility problems</li>
-          <li>Data loss, corruption, or unauthorized access</li>
-          <li>Service interruptions, outages, or technical problems with third-party services</li>
-          <li>Community content posted by other users</li>
-          <li>Any indirect, incidental, special, or consequential damages</li>
-          <li>Any actions or inactions of other users</li>
-        </ul>
-        
-        <p>Use SiratSync at your own discretion. We provide the App on an "as is" and "as available" basis.</p>
+                <h2>6. Disclaimer of Religious Guidance</h2>
+                <p>SiratSync provides Islamic content from authenticated sources to the best of our ability. However, we do not guarantee:</p>
+                <ul>
+                    <li>Fiqh rulings or legal interpretations</li>
+                    <li>Theological interpretations or explanations</li>
+                    <li>Absolute accuracy of translations or contextual understanding</li>
+                    <li>Completeness of any content category</li>
+                </ul>
+                
+                <div class="notice">
+                    <strong>Important:</strong> SiratSync is an educational and reference tool, not a substitute for qualified religious scholarship. Always consult knowledgeable scholars for specific religious guidance and fatwas.
+                </div>
 
-        <h2>8. Termination</h2>
-        <p>We reserve the right to suspend or terminate accounts that violate these Terms. You may also terminate your account at any time by contacting us or using the account deletion feature in the App.</p>
-        
-        <p>Upon termination:</p>
-        <ul>
-          <li>Your right to use the App immediately ceases</li>
-          <li>You must cease all use of the App</li>
-          <li>We may retain certain information as required by law or for legitimate business purposes</li>
-        </ul>
+                <h2>7. Limitation of Liability</h2>
+                <p>To the fullest extent permitted by law, SiratSync and its developers shall not be responsible for:</p>
+                <ul>
+                    <li>Any device issues, malfunctions, or compatibility problems</li>
+                    <li>Data loss, corruption, or unauthorized access</li>
+                    <li>Service interruptions, outages, or technical problems with third-party services</li>
+                    <li>Community content posted by other users</li>
+                    <li>Any indirect, incidental, special, or consequential damages</li>
+                    <li>Any actions or inactions of other users</li>
+                </ul>
+                
+                <p>Use SiratSync at your own discretion. We provide the App on an "as is" and "as available" basis.</p>
 
-        <h2>9. Changes to Terms</h2>
-        <p>We may update these Terms from time to time. When we make changes, we will update the "Last updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the revised Terms.</p>
+                <h2>8. Termination</h2>
+                <p>We reserve the right to suspend or terminate accounts that violate these Terms. You may also terminate your account at any time by contacting us or using the account deletion feature in the App.</p>
+                
+                <p>Upon termination:</p>
+                <ul>
+                    <li>Your right to use the App immediately ceases</li>
+                    <li>You must cease all use of the App</li>
+                    <li>We may retain certain information as required by law or for legitimate business purposes</li>
+                </ul>
 
-        <h2>10. Governing Law</h2>
-        <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction where the developer is based, without regard to its conflict of law provisions.</p>
+                <h2>9. Changes to Terms</h2>
+                <p>We may update these Terms from time to time. When we make changes, we will update the "Last updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the revised Terms.</p>
 
-        <h2>11. Severability</h2>
-        <p>If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+             <h2>10. Governing Law</h2>
+<p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction where the developer operates and maintains the SiratSync application. Any legal disputes shall be resolved in the appropriate courts of that jurisdiction.</p>
 
-        <h2>12. Contact Information</h2>
-        <p>If you have any questions about these Terms of Service, please contact us:</p>
-        <div class="meta">
-          <div>Support Email: <a href="mailto:support@siratsync.com">support@siratsync.com</a></div>
-          <div>Legal Inquiries: <a href="mailto:legal@siratsync.com">legal@siratsync.com</a></div>
-          <div>Website: <a href="https://siratsync.com" target="_blank" rel="noopener">https://siratsync.com</a></div>
-        </div>
-      </section>
+<h2>11. Severability</h2>
+<p>If any provision of these Terms is found to be invalid, illegal or unenforceable, the remaining provisions shall continue in full force and effect, and the invalid provision shall be modified to the minimum extent necessary to make it valid and enforceable.</p>
 
-      <footer class="card">
-        <p><strong>SiratSync</strong> — © <span id="year">2024</span>. All rights reserved.</p>
-      </footer>
-    </main>
-  </div>
-  
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+                <h2>12. Contact Information</h2>
+                <p>If you have any questions about these Terms of Service, please contact us:</p>
+                <div class="meta">
+                    <div>Support Email: <a href="mailto:Siratsync@gmail.com">Siratsync@gmail.com</a></div>
+                    
+                    <div>Website: <a href="https://kaisermohiuddin.me/Siratsync/" target="_blank" rel="noopener">https://kaisermohiuddin.me/Siratsync</a></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p><strong>SiratSync</strong> — © 2025. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
