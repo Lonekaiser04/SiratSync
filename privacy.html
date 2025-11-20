@@ -1,173 +1,343 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — SiratSync</title>
-  <meta name="description" content="Privacy Policy for SiratSync mobile application. Learn what data we collect, how we use it, and your rights." />
-  <style>
-    :root{
-      --bg:#f7f9fb; --card:#ffffff; --muted:#6b7280; --accent:#0f7a4a; --container:1100px;
-      --max-width:900px; --radius:12px; --mono: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    }
-    html,body{height:100%;}
-    body{
-      font-family:var(--mono); background:var(--bg); color:#0b1320; margin:0; -webkit-font-smoothing:antialiased;
-    }
-    .wrap{max-width:var(--container); margin:36px auto; padding:20px;}
-    header.hero{background:linear-gradient(180deg, #ffffff, #f6fbf7); border-radius:14px; padding:28px; box-shadow:0 6px 22px rgba(12,20,16,0.04);}
-    header .title{display:flex; gap:18px; align-items:center}
-    .logo{width:64px; height:64px; border-radius:12px; background:linear-gradient(135deg,#0f7a4a,#055a37); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:20px}
-    h1{font-size:20px; margin:0}
-    p.lead{margin:8px 0 0; color:var(--muted)}
-    .card{background:var(--card); border-radius:12px; padding:22px; margin-top:20px; box-shadow:0 4px 16px rgba(12,20,16,0.04)}
-    h2{font-size:16px; margin-top:0}
-    p{line-height:1.6; color:#111827}
-    ul{margin-left:18px}
-    code{background:#eef2f7; padding:2px 6px; border-radius:6px; font-family:monospace}
-    footer{margin-top:18px; color:var(--muted); font-size:13px}
-    .meta{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px}
-    a{color:var(--accent); text-decoration:none}
-    .small{font-size:13px; color:var(--muted)}
-    .notice{background:#fff8e6; border-left:4px solid #ffd166; padding:10px; border-radius:8px; margin-bottom:12px}
-    @media(max-width:720px){.wrap{margin:18px}} 
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — SiratSync</title>
+    <meta name="description" content="Privacy Policy for SiratSync mobile application. Learn what data we collect, how we use it, and your rights." />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #f7f9fb;
+            --card: #ffffff;
+            --muted: #6b7280;
+            --accent: #0f7a4a;
+            --text: #0b1320;
+            --radius: 12px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 100%;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header.hero {
+            background: linear-gradient(180deg, #ffffff, #f6fbf7);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 22px rgba(12, 20, 16, 0.04);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 16px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius);
+            background: linear-gradient(135deg, #0f7a4a, #055a37);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .header-text h1 {
+            font-size: 22px;
+            margin: 0;
+            color: var(--text);
+        }
+
+        .header-text .lead {
+            margin: 4px 0 0;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .intro-text {
+            color: var(--text);
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(12, 20, 16, 0.04);
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        h3 {
+            font-size: 17px;
+            margin: 20px 0 12px;
+            color: var(--text);
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .notice {
+            background: #fff8e6;
+            border-left: 4px solid #ffd166;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .community-link {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+
+        .community-link:hover {
+            background: #055a37;
+        }
+
+        .meta {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 24px;
+            padding: 16px;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 30px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .header-content {
+                margin-bottom: 20px;
+            }
+            
+            .header-text h1 {
+                font-size: 24px;
+            }
+            
+            .card {
+                padding: 28px;
+            }
+            
+            .meta {
+                flex-direction: row;
+                gap: 20px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 40px;
+            }
+            
+            .card {
+                padding: 32px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="hero">
-      <div class="title">
-        <div class="logo">SS</div>
-        <div>
-          <h1>Privacy Policy — SiratSync</h1>
-          <p class="lead">Last updated: <strong id="lastUpdated">April 15, 2024</strong></p>
-        </div>
-      </div>
-      <p class="lead">This Privacy Policy explains how <strong>SiratSync</strong> ("we", "our", or "us") collects, uses, shares, and protects your information when you use the SiratSync mobile application (the "App"). Please read carefully.</p>
-    </header>
-    
-    <main>
-      <section class="card">
-        <h2>1. Introduction</h2>
-        <p>SiratSync is an Islamic lifestyle application offering Quran (Arabic + English translation), Hadith collections, Prayer Times, Qibla Compass, Duas, Tasbih Counter, Ramadan Mode, Community posts, bookmarks, and related features. This Privacy Policy describes the personal and non-personal information we collect and how we process it.</p>
+    <div class="container">
+        <header class="hero">
+            <div class="header-content">
+                <div class="logo">SS</div>
+                <div class="header-text">
+                    <h1>Privacy Policy — SiratSync</h1>
+                    <p class="lead">Last updated: <strong>November 20, 2025</strong></p>
+                </div>
+            </div>
+            <p class="intro-text">This Privacy Policy explains how <strong>SiratSync</strong> ("we", "our", or "us") collects, uses, shares, and protects your information when you use the SiratSync mobile application (the "App"). Please read carefully.</p>
+        </header>
 
-        <div class="notice">
-          <strong>Notice:</strong> By using the App you consent to the data practices described in this policy. If you do not agree, please do not use the App or disable the specific features that require personal data (for example community posting or location services).
-        </div>
+        <main>
+            <section class="card">
+                <h2>1. Introduction</h2>
+                <p>SiratSync is an Islamic lifestyle application offering Quran (Arabic + English translation), Hadith collections, Prayer Times, Qibla Compass, Duas, Tasbih Counter, Ramadan Mode for Prayer times, Community features, bookmarks, and related features. This Privacy Policy describes the personal and non-personal information we collect and how we process it.</p>
 
-        <h2>2. Information We Collect</h2>
-        <p>We collect information in the following categories depending on the features you use. We collect the minimum data necessary to deliver the service.</p>
+                <div class="notice">
+                    <strong>Notice:</strong> By using the App you consent to the data practices described in this policy. If you do not agree, please do not use the App or disable the specific features that require personal data (for example community posting or location services).
+                </div>
 
-        <h3>A. Information You Provide Directly</h3>
-        <ul>
-          <li><strong>Account information (optional):</strong> If you register or sign in (Google or Email), we may store your display name, email address, and profile photo. This is used to identify you in community posts and to sync bookmarks or preferences.</li>
-          <li><strong>Community posts:</strong> Any text, image, or media you post in the Community section is stored and displayed publicly to other users. Do not post private or sensitive information in community posts.</li>
-          <li><strong>Support messages:</strong> If you contact support, we may keep your message, email address, and any information you supplied to address issues.</li>
-        </ul>
+                <h2>2. Information We Collect</h2>
+                <p>We collect information in the following categories depending on the features you use. We collect the minimum data necessary to deliver the service.</p>
 
-        <h3>B. Information Collected Automatically</h3>
-        <ul>
-          <li><strong>Device & usage data:</strong> Device model, OS version, app version, locale, screen size, and basic usage metrics (features used, sessions, screen views). Collected for analytics and app improvements.</li>
-          <li><strong>Crash logs & diagnostics:</strong> Error reports (stack traces) to help us fix crashes and improve stability.</li>
-          <li><strong>Identifiers:</strong> Device identifiers generated by Firebase or system identifiers for analytics.</li>
-        </ul>
+                <h3>A. Information You Provide Directly</h3>
+                <ul>
+                    <li><strong>Account information (optional):</strong> If you register or sign in (Google or Email), we may store your display name, email address, and profile photo. This is used to identify you in community posts and to sync Streaks, preferences etc.</li>
+                    <li><strong>Community posts:</strong> Any text or symbols you post in the Community section is stored and displayed publicly to other users. Do not post private or sensitive information in community posts.</li>
+                    <li><strong>Support messages:</strong> If you contact support, we may keep your message, email address, and any information you supplied to address issues.</li>
+                </ul>
 
-        <h3>C. Location Data (Optional)</h3>
-        <p>We may request your device's location to provide accurate Prayer Times and Qibla direction. Location access is optional; the App will ask for permission before using location. We only use location while the feature is active, and we do not track your location continuously in the background.</p>
+                <h3>B. Information Collected Automatically</h3>
+                <ul>
+                    <li><strong>Device & usage data:</strong> Device model, OS version, app version, locale, screen size, and basic usage metrics (features used, sessions, screen views). Collected for analytics and app improvements.</li>
+                    <li><strong>Identifiers:</strong> Device identifiers generated by Firebase or system identifiers for analytics.</li>
+                </ul>
 
-        <h3>D. Local Storage</h3>
-        <p>The app stores downloaded content (for example Quran pages, Dua text, and cached resources) on your device for offline use. This data is not shared unless you enable cloud backup.</p>
+                <h3>C. Location Data (Optional)</h3>
+                <p>We may request your device's location to provide accurate Prayer Times and Qibla direction. Location access is optional; the App will ask for permission before using location. We only use location while the feature is active, and we do not track your location continuously in the background.</p>
 
-        <h2>3. How We Use Your Information</h2>
-        <p>We use collected information to:</p>
-        <ul>
-          <li>Provide and personalize the App's features (prayer times, Qibla, Quran access, community posts, bookmarks).</li>
-          <li>Process and store community posts and account settings.</li>
-          <li>Diagnose problems and analyze usage to improve performance and reliability.</li>
-          <li>Send optional transactional messages like password resets or important account notices.</li>
-        </ul>
+                <h3>D. Local Storage</h3>
+                <p>The app stores downloaded content (for example Aurad-e-fatiha and cached resources) on your device for offline use.</p>
 
-        <h2>4. Third-Party Services & Data Sharing</h2>
-        <p>We use third-party services to operate and improve the App. These providers may process or store some of your data as described below:</p>
-        <ul>
-          <li><strong>Firebase (Google):</strong> Analytics, Authentication, Firestore, Crashlytics. See: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a>.</li>
-          <li><strong>Google Play Services:</strong> Used for in-app purchases and app updates.</li>
-        </ul>
-        <p>We do not sell your personal data. We may disclose data to comply with legal obligations or to protect rights, safety, or property.</p>
+                <h2>3. How We Use Your Information</h2>
+                <p>We use collected information to:</p>
+                <ul>
+                    <li>Provide and personalize the App's features (prayer times, Qibla, community posts, bookmarks).</li>
+                    <li>Process and store community posts and account settings.</li>
+                    <li>Diagnose problems and analyze usage to improve performance and reliability.</li>
+                    <li>Send optional transactional messages like password resets or important account notices.</li>
+                </ul>
 
-        <h2>5. Data Safety & Security</h2>
-        <p>We take reasonable steps to secure your data:</p>
-        <ul>
-          <li>Data in transit is encrypted via HTTPS/TLS.</li>
-          <li>We rely on Google/Firebase security for stored cloud data.</li>
-          <li>We use access controls and follow best practices to protect account data.</li>
-        </ul>
-        <p>No method of transmission or storage is 100% secure; we cannot guarantee absolute security.</p>
+                <h2>4. Third-Party Services & Data Sharing</h2>
+                <p>We use third-party services to operate and improve the App. These providers may process or store data as described below:</p>
+                <ul>
+                    <li><strong>Firebase (Google):</strong> Analytics, Authentication, Firestore, Crashlytics. See: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a>.</li>
+                    <li><strong>Google Play Services:</strong> Used for app updates.</li>
+                </ul>
+                <p>We do not sell your personal data. We may disclose data to comply with legal obligations or to protect rights, safety, or property.</p>
 
-        <h2>6. Community Content & Moderation</h2>
-        <p>Community posts are public inside the app. By posting you grant SiratSync a non-exclusive license to display your content. You must follow our Community Guidelines. We reserve the right to remove posts or suspend accounts that violate our rules.</p>
+                <h2>5. Data Safety & Security</h2>
+                <p>We take reasonable steps to secure your data:</p>
+                <ul>
+                    <li>Data in transit is encrypted via HTTPS/TLS.</li>
+                    <li>We rely on Google/Firebase security for stored cloud data.</li>
+                    <li>We use access controls and follow best practices to protect account data.</li>
+                </ul>
+                <p>No method of transmission or storage is 100% secure; we cannot guarantee absolute security.</p>
 
-        <h2>7. Open Data & Dataset Credits</h2>
-        <p>SiratSync uses curated datasets for Quran, Hadith, and Duas. We credit the dataset compilers and original sources as follows:</p>
-        <ul>
-          <li><strong>Quran:</strong> Arabic text is public domain. English translation (where used) is credited to Umm Muhammad via Tanzil.net (CC BY 3.0). See <a href="https://tanzil.net" target="_blank" rel="noopener">Tanzil</a>.</li>
-          <li><strong>Hadith JSON:</strong> Structured Hadith datasets used are credited to the Hadith-JSON project by Ahmed Abdelbaset (GitHub: <a href="https://github.com/AhmedBaset/hadith-json" target="_blank" rel="noopener">AhmedBaset/hadith-json</a>), with original texts from Sunnah.com.</li>
-          <li><strong>Dua datasets:</strong> Dua sources and authors are credited in the app's About section.</li>
-        </ul>
-        <p>If a dataset owner requests removal or modification of their dataset, we will comply promptly.</p>
+                <h2>6. Community Content & Moderation</h2>
+                <p>Community posts are public inside the app. By posting you grant SiratSync a non-exclusive license to display your content. You must follow our Community Guidelines. We reserve the right to remove posts or suspend accounts that violate our rules.</p>
 
-        <h2>8. Ads, Payments & Future Monetization</h2>
-        <p>Currently SiratSync is free and ad-free. If we introduce advertisements or in-app purchases in the future, we will update this Privacy Policy and disclose how ad SDKs or billing data are used. Payment processing (if enabled) is handled by Google Play; we do not receive or store payment card details.</p>
+                <a href="community.html" class="community-link">📜 View Complete Community Guidelines</a>
 
-        <h2>9. Data Retention</h2>
-        <p>We retain user data only as long as necessary to provide the service. Account and community data are retained until you request deletion or close your account. Analytics and crash logs may be retained for product improvement.</p>
+                <h2>7. Open Data & Dataset Credits</h2>
+                <p>SiratSync uses curated datasets for Quran, Hadith, and Duas. We credit the dataset compilers and original sources as follows:</p>
+                <ul>
+                    <li><strong>Quran:</strong> Arabic text is public domain. English translation (where used) is credited to Umm Muhammad via Tanzil.net (CC BY 3.0). See <a href="https://tanzil.net" target="_blank" rel="noopener">Tanzil</a>.</li>
+                    <li><strong>Hadith JSON:</strong> Structured Hadith datasets used are credited to the Hadith-JSON project by Ahmed Abdelbaset (GitHub: <a href="https://github.com/AhmedBaset/hadith-json" target="_blank" rel="noopener">AhmedBaset/hadith-json</a>), with original texts from Sunnah.com.</li>
+                    <li><strong>Dua datasets:</strong> Dua sources and authors are credited in the app's About section.</li>
+                </ul>
+                <p>If a dataset owner requests removal or modification of their dataset, we will comply promptly.</p>
 
-        <h2>10. Your Rights & Choices</h2>
-        <p>You have the following rights (subject to local law):</p>
-        <ul>
-          <li><strong>Access:</strong> Request a copy of your personal data.</li>
-          <li><strong>Correction:</strong> Request correction of inaccurate data.</li>
-          <li><strong>Deletion:</strong> Request deletion of your account and personal data.</li>
-          <li><strong>Permissions:</strong> Revoke location or notification permissions in your device settings.</li>
-        </ul>
-        <p>To exercise these rights, contact us at <a href="mailto:privacy@siratsync.com">privacy@siratsync.com</a>. We will respond in accordance with applicable law.</p>
+                <h2>8. Ads, Payments & Future Monetization</h2>
+                <p>Currently SiratSync is free and ad-free. If we introduce advertisements or in-app purchases in the future, we will update this Privacy Policy and disclose how ad SDKs or billing data are used. Payment processing (if enabled) is handled by Google Play; we do not receive or store payment card details.</p>
 
-        <h2>11. Children</h2>
-        <p>SiratSync is not intended for children under 13. We do not knowingly collect personal data from children under 13. If you believe a child under 13 has provided personal data, contact us and we will remove it.</p>
+                <h2>9. Data Retention</h2>
+                <p>We retain user data only as long as necessary to provide the service. Account and community data are retained until you request deletion or close your account. Analytics and crash logs may be retained for product improvement.</p>
 
-        <h2>12. International Transfers</h2>
-        <p>Data may be processed or stored in countries where our service providers operate. By using the App you consent to transfer and processing of your data in those jurisdictions.</p>
+                <h2>10. Your Rights & Choices</h2>
+                <p>You have the following rights (subject to local law):</p>
+                <ul>
+                    <li><strong>Access:</strong> Request a copy of your personal data.</li>
+                    <li><strong>Correction:</strong> Request correction of inaccurate data.</li>
+                    <li><strong>Deletion:</strong> Request deletion of your account and personal data.</li>
+                    <li><strong>Permissions:</strong> Revoke location or notification permissions in your device settings.</li>
+                </ul>
+                <p>To exercise these rights, contact us at <a href="mailto:Siratsync@gmail.com">Siratsync@gmail.com</a>. We will respond in accordance with applicable law.</p>
 
-        <h2>13. Changes to this Policy</h2>
-        <p>We may update this Privacy Policy occasionally. When changes are made we will update the "Last updated" date above. Continued use of the App after changes indicates acceptance of the revised Policy.</p>
+                <h2>11. Children</h2>
+                <p>SiratSync is not intended for children under 13. We do not knowingly collect personal data from children under 13. If you believe a child under 13 has provided personal data, contact us and we will remove it.</p>
 
-        <h2>14. Community Guidelines</h2>
-        <p>Please follow these Community Guidelines when posting content in the app:</p>
-        <ul>
-          <li>Respect all users regardless of their background or beliefs</li>
-          <li>Do not post hate speech, explicit content, or misinformation</li>
-          <li>Avoid political campaigning, spam, or commercial promotions</li>
-          <li>Maintain a respectful and constructive tone in discussions</li>
-        </ul>
-        <p>Violations may lead to content removal or account suspension.</p>
+                <h2>12. International Transfers</h2>
+                <p>Data may be processed or stored in countries where our service providers operate. By using the App you consent to transfer and processing of your data in those jurisdictions.</p>
 
-        <h2>15. Contact Us</h2>
-        <p>If you have questions, requests, or concerns about this Privacy Policy or your personal data, contact:</p>
-        <div class="meta">
-          <div>Privacy Email: <a href="mailto:privacy@siratsync.com">privacy@siratsync.com</a></div>
-          <div>Support Email: <a href="mailto:support@siratsync.com">support@siratsync.com</a></div>
-          <div>Website: <a href="https://siratsync.com" target="_blank" rel="noopener">https://siratsync.com</a></div>
-        </div>
-      </section>
+                <h2>13. Changes to this Policy</h2>
+                <p>We may update this Privacy Policy occasionally. When changes are made we will update the "Last updated" date above. Continued use of the App after changes indicates acceptance of the revised Policy.</p>
 
-      <footer class="card">
-        <p><strong>SiratSync</strong> — © <span id="year">2024</span>. All rights reserved.</p>
-      </footer>
-    </main>
-  </div>
-  
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+                <h2>14. Community Guidelines Reference</h2>
+                <p>Please follow these Community Guidelines when posting content in the app:</p>
+                <ul>
+                    <li>Respect all users regardless of their background or beliefs</li>
+                    <li>Do not post hate speech, explicit content, or misinformation</li>
+                    <li>Avoid political campaigning, spam, or commercial promotions</li>
+                    <li>Maintain a respectful and constructive tone in discussions</li>
+                </ul>
+                <p>Violations may lead to content removal or account suspension.</p>
+
+                <a href="community.html" class="community-link">📜 Read Full Community Guidelines</a>
+
+                <h2>15. Contact Us</h2>
+                <p>If you have questions, requests, or concerns about this Privacy Policy or your personal data, contact:</p>
+                <div class="meta">
+                    <div>Privacy and Support Email: <a href="mailto:Siratsync@gmail.com">Siratsync@gmail.com</a></div>
+                    <div>Website: <a href="https://kaisermohiuddin.me/Siratsync" target="_blank" rel="noopener">https://kaisermohiuddin.me/Siratsync</a></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p><strong>SiratSync</strong> — © 2025. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
