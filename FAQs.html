@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiratSync FAQ - Your Spiritual Companion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --emerald: #0d9488;
+            --teal: #14b8a6;
+            --soft-gold: #eab308;
+            --light-gold: #fef9c3;
+            --dark-green: #0f766e;
+            --light-bg: #f8fafc;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --white: #ffffff;
+            --border-radius: 10px;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 10px 25px rgba(13, 148, 136, 0.1);
+            --geometric-bg: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M20,20 L50,50 L80,20 L80,80 L20,80 Z" fill="none" stroke="%230d9488" stroke-width="0.5" opacity="0.1"/></svg>');
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+            background-image: var(--geometric-bg);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--dark-green) 0%, var(--emerald) 100%);
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><path d="M30,5 L55,30 L30,55 L5,30 Z" fill="none" stroke="white" stroke-width="0.3" opacity="0.1"/></svg>');
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-family: 'Amiri', serif;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .app-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--soft-gold);
+        }
+        
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+        
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            padding: 0 1rem;
+        }
+        
+        /* FAQ Section */
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+        
+        .category-title {
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            color: var(--emerald);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-gold);
+            display: flex;
+            align-items: center;
+        }
+        
+        .category-icon {
+            margin-right: 10px;
+            color: var(--soft-gold);
+        }
+        
+        .faq-item {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-3px);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .faq-question i {
+            color: var(--emerald);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+            color: var(--text-light);
+            border-top: 1px solid transparent;
+        }
+        
+        .faq-answer.open {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem;
+            border-top: 1px solid #f1f5f9;
+        }
+        
+        .feature-highlight {
+            background-color: var(--light-gold);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            margin: 0.5rem 0;
+            display: inline-block;
+            font-size: 0.9rem;
+            color: var(--dark-green);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-green);
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .app-links {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .app-link {
+            background-color: var(--emerald);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .app-link:hover {
+            background-color: var(--soft-gold);
+            color: var(--dark-green);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .faq-question {
+                padding: 1.2rem;
+                font-size: 1rem;
+            }
+            
+            .app-links {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .category-title {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Animation for geometric pattern */
+        @keyframes geometricFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+        
+        .geometric-accents {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .accent-1 {
+            top: 10%;
+            right: 5%;
+            animation: geometricFloat 20s infinite ease-in-out;
+            color: var(--emerald);
+        }
+        
+        .accent-2 {
+            bottom: 15%;
+            left: 5%;
+            animation: geometricFloat 25s infinite ease-in-out reverse;
+            color: var(--soft-gold);
+        }
+        
+        .main-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Geometric accents -->
+    <div class="geometric-accents accent-1">
+        <i class="fas fa-star-and-crescent fa-3x"></i>
+    </div>
+    <div class="geometric-accents accent-2">
+        <i class="fas fa-dharmachakra fa-3x"></i>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="app-icon">
+                <i class="fas fa-star-and-crescent"></i>
+            </div>
+            <h1>SiratSync FAQ</h1>
+            <p class="subtitle">Your Spiritual Companion for Qur'an, Prayer, and Islamic Reminders</p>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="container main-content">
+        <p class="intro-text">Welcome to SiratSync, your comprehensive Islamic mobile companion. This FAQ will help you understand all the features, settings, and capabilities of our app. If you have additional questions, please reach out through our in-app support.</p>
+        
+        <!-- Quran & Reading Features -->
+        <section class="faq-category">
+            <h2 class="category-title">
+                <i class="fas fa-quran category-icon"></i>
+                Quran Reading & Features
+            </h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Does SiratSync offer Quran translations?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! SiratSync includes translations in <span class="feature-highlight">English</span>. You can view the translation alongside the Arabic text or as a separate pane.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I read Quran offline?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! SiratSync includes the complete Quran text, translations.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Prayer & Reminders -->
+        <section class="faq-category">
+            <h2 class="category-title">
+                <i class="fas fa-mosque category-icon"></i>
+                Prayer Times & Reminders
+            </h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How accurate are the prayer times in SiratSync?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>SiratSync calculates prayer times based on your precise location using multiple calculation methods (Umm al-Qura, ISNA, Muslim World League, etc.). You can select your preferred calculation method in settings.</p>
+                    <p>By default, SiratSync provides notifications 10 minutes before each prayer time to help you prepare but you can change this in settings to recieve notification before 30,20 minutes etc.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do Adhan alerts and background notifications work?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>SiratSync uses Android's <span class="feature-highlight">WorkManager</span> for reliable, battery-efficient scheduling of prayer notifications. Even if the app is closed, you'll receive Adhan alerts at the correct times.</p>
+                    <p>You can customize the Adhan sound, vibration pattern, and notification style for prayer times. The app also provides "Time to Pray" reminders before each prayer time.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Does SiratSync track my prayer history?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, the Islamic Habit Tracker includes prayer logging. You can mark prayers as completed, make up missed prayers, and view your prayer consistency over time with beautiful visual charts.</p>
+                    <p>This feature is designed to encourage consistency without judgment, helping you build and maintain your prayer habit.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Daily Features -->
+        <section class="faq-category">
+            <h2 class="category-title">
+                <i class="fas fa-calendar-star category-icon"></i>
+                Daily Inspiration & Tracking
+            </h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What are "Verse of the Day" and "Hadith of the Day"?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Each day, SiratSync presents you with an inspiring <span class="feature-highlight">Verse of the Day</span> and <span class="feature-highlight">Hadith of the Day</span> to start your morning with spiritual reflection.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How does the Islamic Habit Tracker work?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>The Habit Tracker helps you build consistent Islamic practices like prayer, Quran reading, fasting, and charity. You set goals, log your activities, and track progress with motivational streaks and achievements.</p>
+                    <p>It's designed with Islamic psychology in mind, focusing on gradual improvement and Allah's mercy rather than perfectionism.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Does the Tasbih Counter save my counts?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>No! The Tasbih Counter does not save your counts between sessions to maintain your privacy and simplicity.</p>
+                    <p>The counter includes beautiful visual feedback and optional vibration with each count to enhance your mindfulness during dhikr.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technical & Privacy -->
+        <section class="faq-category">
+            <h2 class="category-title">
+                <i class="fas fa-user-shield category-icon"></i>
+                Privacy, Sync & Technical
+            </h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Is my data private and secure with SiratSync?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><span class="feature-highlight">Absolutely.</span> SiratSync is designed with privacy as a core Islamic value. Your prayer logs, Quran bookmarks, and personal data never leave your device.</p>
+                    <p>We don't collect personal information, track your app usage for advertising, or share data with third parties. The app is completely ad-free.</p>
+                </div>
+            </div>
+            
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What permissions does SiratSync need and why?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>SiratSync requests minimal permissions:</p>
+                    <ul>
+                        <li><strong>Location</strong>: For accurate prayer times and Qibla direction</li>
+                        <li><strong>Notifications</strong>: For prayer alerts and spiritual reminders</li>
+                        <li><strong>Storage</strong>: To download Aurad e fatiha for offline use</li>
+                    </ul>
+                    <p>You can deny any permission, though some features may be limited. We never access contacts, messages, or other personal data.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I customize the app's appearance?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! SiratSync offers multiple themes including light, dark, and sepia modes. You can adjust font sizes, choose Quran page styles, and select accent colors to create a comfortable reading experience.</p>
+                    <p>The app respects system dark mode settings and can automatically adjust based on time of day or your preference.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Community & Future -->
+        <section class="faq-category">
+            <h2 class="category-title">
+                <i class="fas fa-users category-icon"></i>
+                Community & Future Features
+            </h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What is the Community feature?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>The Community section allows you to share inspiring verses,hadiths , reflections and other islamic content.</p>
+                    <p>All community interactions are moderated to ensure respectful, beneficial discussions in line with Islamic principles. This feature is completely optional.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Is SiratSync available in any other Languages ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, SiratSync supports multiple languages including Arabic, English, Urdu,Hindi and Malay. We are continuously adding new translations to make the app accessible to a wider audience.</p>
+                    <p>You can change the app language in settings, and Quran translations are available in only English.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What features are planned for future updates?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Based on user feedback, we're working on:</p>
+                    <ul>
+                        <li>Advanced Quran study tools with tafsir integration</li>
+                        <li>Ramadan-specific features including I'tikaf tracker</li>
+                        <li>Enhanced audio features with famous Qaris</li>
+                        <li>Zakat calculator and charity tracking</li>
+                    </ul>
+                    <p>We welcome your suggestions through the in-app feedback form!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="app-icon">
+                <i class="fas fa-star-and-crescent"></i>
+            </div>
+            <h3>SiratSync - Your Path to Consistency</h3>
+            <p>May Allah make this app a means of benefit and guidance for all who use it.</p>
+            
+            <div class="app-links">
+                <a href="#" class="app-link">
+                    <i class="fab fa-google-play"></i> Get on Google Play
+                </a>
+                <a href="#" class="app-link">
+                    <i class="fab fa-app-store"></i> Download on App Store
+                </a>
+            </div>
+            
+            <p class="copyright">© 2023 SiratSync. All rights reserved. | "SiratSync" means "Path Synchronization"</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ toggle functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isOpen = answer.classList.contains('open');
+                    
+                    // Close all other answers
+                    document.querySelectorAll('.faq-answer').forEach(item => {
+                        item.classList.remove('open');
+                    });
+                    
+                    // Remove active class from all questions
+                    document.querySelectorAll('.faq-question').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    // If the clicked answer wasn't open, open it
+                    if (!isOpen) {
+                        answer.classList.add('open');
+                        question.classList.add('active');
+                    }
+                });
+            });
+            
+            // Open first question by default
+            if (faqQuestions.length > 0) {
+                faqQuestions[0].click();
+            }
+            
+            // Add subtle animation to geometric accents on scroll
+            window.addEventListener('scroll', function() {
+                const accents = document.querySelectorAll('.geometric-accents');
+                const scrollPosition = window.scrollY;
+                
+                accents.forEach(accent => {
+                    const speed = accent.classList.contains('accent-1') ? 0.5 : 0.3;
+                    const yPos = scrollPosition * speed;
+                    accent.style.transform = `translateY(${yPos}px)`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
