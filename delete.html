@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiratSync — Delete Account Help</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --primary-light: #e0e7ff;
+            --bg-color: #f3f4f6;
+            --card-color: #ffffff;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --danger-color: #dc2626;
+            --danger-light: #fee2e2;
+            --border-radius: 12px;
+            --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+            background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-xs);
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: var(--card-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .danger-card {
+            border-left: 4px solid var(--danger-color);
+            background-color: var(--danger-light);
+        }
+
+        /* List Styles */
+        ol.steps {
+            list-style-type: none;
+            counter-reset: step-counter;
+            padding-left: 0;
+        }
+
+        ol.steps li {
+            counter-increment: step-counter;
+            margin-bottom: var(--spacing-md);
+            padding-left: 3.5rem;
+            position: relative;
+        }
+
+        ol.steps li:before {
+            content: counter(step-counter);
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        ul.data-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul.data-list li {
+            margin-bottom: var(--spacing-sm);
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        ul.data-list li:before {
+            content: "×";
+            color: var(--danger-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Image Styles */
+        .screenshot-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-lg);
+            justify-content: center;
+            margin-top: var(--spacing-md);
+        }
+
+        .screenshot-item {
+            flex: 1;
+            min-width: 280px;
+            max-width: 450px;
+        }
+
+        .screenshot {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: var(--spacing-xs);
+            font-style: italic;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: var(--spacing-lg) 0;
+            margin-top: var(--spacing-xl);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .card {
+                padding: var(--spacing-md);
+            }
+            
+            ol.steps li {
+                padding-left: 2.8rem;
+            }
+            
+            ol.steps li:before {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 var(--spacing-sm);
+            }
+            
+            header {
+                padding: var(--spacing-lg) 0 var(--spacing-md);
+            }
+            
+            .screenshot-item {
+                min-width: 100%;
+            }
+        }
+
+        /* Highlight Text */
+        .highlight {
+            background-color: rgba(79, 70, 229, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .danger-text {
+            color: var(--danger-color);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">SiratSync</h1>
+            <p class="subtitle">Instructions for deleting your account and understanding how Google login works</p>
+        </header>
+
+        <main>
+            <section id="delete-account">
+                <h2 class="section-title">How to Delete Your Account</h2>
+                <div class="card danger-card">
+                    <p>To delete your SiratSync account, follow these steps:</p>
+                    <ol class="steps">
+                        <li>Open the SiratSync app.</li>
+                        <li>Go to <span class="highlight">Settings</span> from the top of the screen.</li>
+                        <li>Scroll down to the bottom section labeled <span class="danger-text">Danger Zone</span>.</li>
+                        <li>Tap on <span class="danger-text">Delete Account</span>.</li>
+                        <li>A confirmation screen will appear showing what data will be permanently removed.</li>
+                    </ol>
+                    <p class="danger-text">This process cannot be undone once completed.</p>
+                </div>
+            </section>
+
+            <section id="google-login">
+                <h2 class="section-title">When Using Google Login</h2>
+                <div class="card">
+                    <p>If you signed in using your Google account, you do <strong>NOT</strong> need a password to delete your account. Google accounts rely on your most recent login session.</p>
+                    <p>If your session is old or expired, your device may ask you to verify your Google account again before continuing. No password is required from SiratSync.</p>
+                </div>
+            </section>
+
+            <section id="email-login">
+                <h2 class="section-title">When Using Email/Password Login</h2>
+                <div class="card">
+                    <p>If you created your account using an email and password, you will be asked to enter your password to confirm deletion.</p>
+                </div>
+            </section>
+
+            <section id="data-deletion">
+                <h2 class="section-title">Data That Will Be Deleted</h2>
+                <div class="card">
+                    <p>Deleting your account will permanently remove:</p>
+                    <ul class="data-list">
+                        <li>Your profile information</li>
+                        <li>All posts, comments, likes, and activities</li>
+                        <li>Followers and following data</li>
+                        <li>All habits and streak information</li>
+                        <li>Account settings and app preferences</li>
+                        <li>Login activity and user ID</li>
+                        <li>Access to premium features</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="screenshots">
+                <h2 class="section-title">Screenshots</h2>
+                <div class="screenshot-container">
+                    <div class="screenshot-item">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Settings Page" class="screenshot" />
+                        <p class="caption">Settings page where Delete Account option is located.</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Delete Confirmation Screen" class="screenshot" />
+                        <p class="caption">Delete Account confirmation screen.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 SiratSync | Account Removal Help Page</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add subtle animation to cards when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                card.style.opacity = '0.7';
+                card.style.transform = 'translateY(10px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+            
+            // Add a simple click effect to cards
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.99)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
