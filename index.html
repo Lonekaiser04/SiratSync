@@ -249,11 +249,6 @@ h3 {
             justify-content: center;
             align-items: center;
         }
-        .feature-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 
         /* Phone Screenshot Marquee */
@@ -429,18 +424,19 @@ h3 {
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
         }
 
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--light-emerald);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: var(--emerald);
-        }
+      .feature-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--light-emerald);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto; /* ✅ THIS */
+    font-size: 24px;
+    color: var(--emerald);
+}
+
 
         .feature-card h3 {
             font-size: 22px;
@@ -1701,6 +1697,7 @@ screenshotContainer.addEventListener('mouseleave', () => {
     </script>
 </body>
 </html>
+
 
 
 
