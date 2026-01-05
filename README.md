@@ -37,7 +37,6 @@ SiratSync is a comprehensive Islamic lifestyle application designed to help Musl
 
 ### Mobile App
 - **Google Play**: https://play.google.com/store/apps/details?id=com.islamic.streakly
-- **Direct APK**: https://drive.google.com/uc?export=download&id=1rBpAFZLdP36NlHmejWpwBwSPy_Tzo2Ai
 - **App Store**: Coming soon
 
 # Open in browser
