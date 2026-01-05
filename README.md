@@ -3,8 +3,6 @@
 <div align="center">
   
   ![SiratSync Logo](https://img.shields.io/badge/SiratSync-Islamic%20App-009688?style=for-the-badge&logo=islam&logoColor=white)
-  ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-  ![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge)
   ![Responsive](https://img.shields.io/badge/Responsive-✓-success?style=for-the-badge)
   
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5">
@@ -32,7 +30,7 @@
 ### 📱 App Features Highlighted
 | Feature | Description | Icon |
 |---------|-------------|------|
-| **📖 Quran Reader** | Complete Quran with Uthmani script, translations, and bookmarks | `fas fa-book-quran` |
+| **📖 Quran Reader** | Complete Quran with Uthmani script, translations, and bookmarks | fas fa-book-quran |
 | **🕌 Prayer Times** | Accurate prayer calculations with Qibla direction and mosque finder | `fas fa-mosque` |
 | **📜 Hadith Library** | Authentic collections from Sahih Bukhari & Sahih Muslim | `fas fa-book-open` |
 | **🤲 Duas Collection** | Comprehensive supplications for daily life occasions | `fas fa-hands-praying` |
