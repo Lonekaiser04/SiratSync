@@ -370,6 +370,31 @@
             margin-bottom: 15px;
             color: var(--gold);
         }
+        /* Website Button */
+.website-btn {
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(124, 58, 237, 0.25);
+}
+
+/* Icon color consistency */
+.website-btn i {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+/* Hover effect */
+.website-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(124, 58, 237, 0.35);
+    filter: brightness(1.05);
+}
+
+/* Active (click) state */
+.website-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+}
 
         /* Values Grid */
         .values-grid {
@@ -720,30 +745,42 @@
                 <span class="skill-tag">AI & Machine Learning</span>
             </div>
 
-            <div class="developer-contact">
-                <a 
-                    href="https://wa.me/919541871382?text=Assalamualaikum%2C%20I%20have%20a%20question%20about%20SiratSync"
-                    class="contact-btn whatsapp-btn"
-                    target="_blank"
-                >
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
+           <div class="developer-contact">
+    <a 
+        href="https://wa.me/919541871382?text=Assalamualaikum%2C%20I%20have%20a%20question%20about%20SiratSync"
+        class="contact-btn whatsapp-btn"
+        target="_blank"
+        rel="noopener"
+    >
+        <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
 
-                <a 
-                    href="mailto:siratsync@gmail.com"
-                    class="contact-btn email-btn"
-                >
-                    <i class="fas fa-envelope"></i> Email
-                </a>
+    <a 
+        href="mailto:siratsync@gmail.com"
+        class="contact-btn email-btn"
+    >
+        <i class="fas fa-envelope"></i> Email
+    </a>
 
-                <a 
-                    href="https://github.com/Lonekaiser04"
-                    class="contact-btn github-btn"
-                    target="_blank"
-                >
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </div>
+    <a 
+        href="https://kaisermohiuddin.me"
+        class="contact-btn website-btn"
+        target="_blank"
+        rel="noopener"
+    >
+        <i class="fas fa-globe"></i> Website
+    </a>
+
+    <a 
+        href="https://github.com/Lonekaiser04"
+        class="contact-btn github-btn"
+        target="_blank"
+        rel="noopener"
+    >
+        <i class="fab fa-github"></i> GitHub
+    </a>
+</div>
+
         </div>
     </div>
 </section>
