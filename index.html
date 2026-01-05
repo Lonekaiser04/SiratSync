@@ -5,29 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Title -->
-    <title>SiratSync - Download Siratsync- Quran, Prayer Times, Duas, Hadith, Tasbih & Islamic Habit Tracker</title>
+    <title>SiratSync - Quran, Prayer Times, Duas, Hadith, Tasbih & Islamic Habit Tracker</title>
     
     <!-- Meta Description -->
-    <meta name="description" content="SiratSync is your all-in-one Islamic app with Quran, Hadith, Prayer Times, Duas, Qibla dirction, Tasbih, Community features, Islamic calendar & habit tracker.">
+    <meta name="description" content="SiratSync is your all-in-one Islamic lifestyle app with Quran, Hadith, Prayer Times, Duas, Qibla direction, Tasbih, Community features, Islamic calendar & habit tracker.">
 
     <!-- Meta Keywords -->
-    <meta name="keywords" content="Download Siratsync, siratsync app, Islamic app, Quran app, Hadith app, prayer times app, tasbih counter, dua app, 99 names of Allah app, Islamic calendar, habit tracker, Muslim lifestyle app, Ramadan app, Siratsync application,best Islamic app">
+    <meta name="keywords" content="SiratSync, Islamic app, Quran app, Hadith app, prayer times app, tasbih counter, dua app, Islamic calendar, habit tracker, Muslim lifestyle app, Ramadan app, community features, Qibla direction, Islamic lifestyle, Quran reading, Hadith reading, prayer reminders, Islamic community, Muslim habits,Ummah">
 
     <!-- Author -->
     <meta name="author" content="SiratSync Team">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="SiratSync – All-in-One Islamic App">
-    <meta property="og:description" content="Download SiratSync: Quran, Hadith, Prayer Times, Duas, Tasbih, 99 Names of Allah, Islamic Calendar & Habit Tracker.">
-    <meta property="og:image" content="https://yourwebsite.com/siratsync-preview.png">
-    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:title" content="SiratSync – Your Complete Islamic Lifestyle Companion">
+    <meta property="og:description" content="Stay connected to your deen with Quran, Hadith, Prayer Times, Duas, Tasbih, Islamic Community & Habit Tracker in one beautiful app.">
+    <meta property="og:image" content="https://kaisermohiuddin.me/siratsync-preview.png">
+    <meta property="og:url" content="https://kaisermohiuddin.me">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SiratSync – Your Islamic Lifestyle App">
     <meta name="twitter:description" content="SiratSync helps Muslims stay connected with faith through Quran, Hadith, Prayer Times, Duas, Tasbih, and more.">
-    <meta name="twitter:image" content="https://yourwebsite.com/siratsync-preview.png">
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -46,6 +45,8 @@
             --light-emerald: rgba(0, 150, 136, 0.1);
             --text-gray: #666;
             --dark-bg: #0a3d3a;
+            --gradient-emerald: linear-gradient(135deg, var(--emerald) 0%, #00b894 100%);
+            --gradient-gold: linear-gradient(135deg, var(--gold) 0%, #ffeb3b 100%);
         }
 
         * {
@@ -77,7 +78,7 @@
             width: 100%;
             z-index: 1000;
             transition: all 0.3s ease;
-            padding: 10px 0;
+            padding: 15px 0;
         }
 
         .header-container {
@@ -91,7 +92,7 @@
             align-items: center;
             gap: 10px;
             font-weight: 700;
-            font-size: 20px;
+            font-size: 24px;
             color: var(--emerald);
             text-decoration: none;
         }
@@ -145,9 +146,9 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--emerald) 0%, #00b894 100%);
+            background: var(--gradient-emerald);
             color: var(--white);
-            padding: 150px 0 100px;
+            padding: 150px 0 80px;
             position: relative;
             overflow: hidden;
         }
@@ -179,6 +180,14 @@
             font-size: 42px;
             margin-bottom: 20px;
             line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .hero-text .tagline {
+            font-size: 20px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+            font-weight: 400;
         }
 
         .hero-text p {
@@ -191,14 +200,15 @@
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
+            margin-bottom: 40px;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 12px 24px;
-            border-radius: 8px;
+            padding: 15px 30px;
+            border-radius: 10px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s;
@@ -208,14 +218,13 @@
         }
 
         .btn-primary {
-            background-color: var(--gold);
+            background: var(--gradient-gold);
             color: var(--black);
         }
 
         .btn-primary:hover {
-            background-color: #ffeb3b;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .btn-secondary {
@@ -226,7 +235,7 @@
 
         .btn-secondary:hover {
             background-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-3px);
+            transform: translateY(-5px);
         }
 
         .hero-image {
@@ -236,132 +245,118 @@
             align-items: center;
         }
 
-        .phone-mockup {
-            width: 300px;
-            height: 600px;
-            background-color: var(--white);
-            border-radius: 40px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .phone-mockup:hover {
-            transform: translateY(-10px);
-        }
-
-        .phone-screen {
+        /* Phone Screenshot Marquee */
+        .phone-marquee-container {
             width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, #1a5f7a, #159895);
-            border-radius: 32px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
+            max-width: 400px;
             position: relative;
+            border-radius: 30px;
             overflow: hidden;
-        }
-
-        .phone-notch {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            height: 25px;
-            background-color: var(--white);
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            z-index: 10;
-        }
-
-        .app-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-top: 10px;
-        }
-
-        .app-time {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--white);
-        }
-
-        .app-icons {
-            display: flex;
-            gap: 5px;
-        }
-
-        .app-icon {
-            width: 4px;
-            height: 4px;
-            background-color: var(--white);
-            border-radius: 50%;
-        }
-
-        .app-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            overflow-y: auto;
-            padding-bottom: 10px;
-        }
-
-        .app-card {
-            background-color: rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            background: var(--white);
             padding: 15px;
-            color: var(--white);
-            transition: transform 0.2s;
         }
 
-        .app-card:hover {
-            transform: translateY(-2px);
+        .phone-frame {
+            width: 100%;
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+            border: 8px solid #111;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+            background: #111;
         }
 
-        .app-card h3 {
-            font-size: 16px;
-            margin-bottom: 8px;
+        .screenshot-marquee {
             display: flex;
-            align-items: center;
-            gap: 8px;
+            width: 300%; /* 3 screenshots = 300% */
+            transition: transform 0.8s ease-in-out;
         }
 
-        .app-card p {
-            font-size: 12px;
-            opacity: 0.8;
+        .screenshot-item {
+            width: 33.333%; /* Each screenshot takes 1/3 of the width */
+            flex-shrink: 0;
         }
 
-        .app-footer {
+        .screenshot-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 17px;
+        }
+
+        .marquee-controls {
             display: flex;
-            justify-content: space-around;
-            padding: 10px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
         }
 
-        .app-nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: var(--white);
-            font-size: 12px;
-            gap: 5px;
+        .marquee-btn {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.4);
+            border: none;
             cursor: pointer;
-            transition: color 0.3s;
-            opacity: 0.7;
+            transition: all 0.3s;
+            position: relative;
         }
 
-        .app-nav-item.active {
-            opacity: 1;
+        .marquee-btn.active {
+            background-color: var(--gold);
+            transform: scale(1.2);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .marquee-btn::after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .marquee-btn.active::after {
+            border-color: var(--gold);
+        }
+
+        /* Feature Highlights */
+        .feature-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 15px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .highlight-item:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .highlight-item i {
             color: var(--gold);
+            font-size: 18px;
         }
 
-        .app-nav-item:hover {
-            opacity: 1;
+        .highlight-item span {
+            font-size: 14px;
+            font-weight: 500;
         }
 
         /* Features Section */
@@ -375,32 +370,37 @@
         }
 
         .section-title h2 {
-            font-size: 32px;
+            font-size: 36px;
             color: var(--emerald);
             margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .section-title p {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
             color: var(--text-gray);
+            font-size: 18px;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
         }
 
         .feature-card {
             background-color: var(--white);
-            border-radius: 12px;
+            border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .feature-card::before {
@@ -410,137 +410,145 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(to right, var(--emerald), var(--gold));
+            background: var(--gradient-emerald);
         }
 
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
         }
 
         .feature-icon {
-            width: 70px;
-            height: 70px;
-            background-color: var(--light-emerald);
-            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            background: var(--light-emerald);
+            border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 28px;
+            margin-bottom: 20px;
+            font-size: 24px;
             color: var(--emerald);
         }
 
         .feature-card h3 {
-            font-size: 20px;
+            font-size: 22px;
             margin-bottom: 15px;
             color: var(--emerald);
         }
 
         .feature-card p {
             color: var(--text-gray);
+            margin-bottom: 15px;
+            flex-grow: 1;
         }
 
-        /* Why Choose Section */
-        .why-choose {
-            background-color: var(--light-gray);
+        .feature-list {
+            list-style: none;
+            margin-top: 10px;
         }
 
-        .benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .benefit-item {
+        .feature-list li {
+            margin-bottom: 8px;
+            color: var(--text-gray);
             display: flex;
             align-items: flex-start;
-            gap: 15px;
+            gap: 8px;
         }
 
-        .benefit-icon {
+        .feature-list li i {
+            color: var(--emerald);
+            margin-top: 3px;
+        }
+
+        /* Screenshots Section */
+        .screenshots-section {
+            background-color: var(--light-gray);
+        }
+
+        .screenshots-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .screenshot-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .screenshot-slide {
+            min-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .screenshot-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .screenshot-text {
+            flex: 1;
+        }
+
+        .screenshot-text h3 {
+            font-size: 28px;
+            color: var(--emerald);
+            margin-bottom: 15px;
+        }
+
+        .screenshot-text p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .screenshot-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .screenshot-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .screenshot-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .screenshot-nav-btn {
             width: 50px;
             height: 50px;
-            background-color: var(--emerald);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: var(--emerald);
             color: var(--white);
-            font-size: 20px;
-            flex-shrink: 0;
-        }
-
-        .benefit-content h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: var(--emerald);
-        }
-
-        .benefit-content p {
-            color: var(--text-gray);
-        }
-
-        /* Interactive Phone Display */
-        .interactive-phone {
-            background-color: var(--light-gray);
-            padding: 80px 0;
-        }
-
-        .phone-display-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-
-        .phone-tabs {
-            flex: 1;
-            max-width: 500px;
-        }
-
-        .tab-selector {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .tab-btn {
-            background-color: var(--white);
             border: none;
-            padding: 15px 20px;
-            border-radius: 10px;
-            text-align: left;
-            font-size: 16px;
-            font-weight: 500;
+            font-size: 20px;
             cursor: pointer;
             transition: all 0.3s;
             display: flex;
             align-items: center;
-            gap: 15px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .tab-btn:hover {
-            transform: translateX(5px);
-            background-color: var(--light-emerald);
-        }
-
-        .tab-btn.active {
-            background-color: var(--emerald);
-            color: var(--white);
-        }
-
-        .tab-btn i {
-            font-size: 20px;
-            width: 24px;
-        }
-
-        .phone-display {
-            flex: 1;
-            display: flex;
             justify-content: center;
+        }
+
+        .screenshot-nav-btn:hover {
+            background: var(--dark-emerald);
+            transform: scale(1.1);
         }
 
         /* Testimonials Section */
@@ -550,15 +558,15 @@
 
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 30px;
         }
 
         .testimonial-card {
             background-color: var(--white);
-            border-radius: 12px;
+            border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             position: relative;
         }
 
@@ -567,10 +575,11 @@
             position: absolute;
             top: 10px;
             left: 20px;
-            font-size: 60px;
+            font-size: 80px;
             color: var(--light-emerald);
             font-family: 'Amiri', serif;
             line-height: 1;
+            opacity: 0.5;
         }
 
         .testimonial-text {
@@ -578,28 +587,33 @@
             margin-bottom: 20px;
             color: var(--text-gray);
             padding-top: 20px;
+            font-size: 16px;
+            line-height: 1.7;
         }
 
         .testimonial-author {
             display: flex;
             align-items: center;
             gap: 15px;
+            border-top: 1px solid var(--light-gray);
+            padding-top: 20px;
         }
 
         .author-avatar {
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-color: var(--emerald);
+            background: var(--gradient-emerald);
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
             font-weight: 600;
+            font-size: 18px;
         }
 
         .author-info h4 {
-            font-size: 16px;
+            font-size: 18px;
             margin-bottom: 5px;
             color: var(--emerald);
         }
@@ -611,21 +625,22 @@
 
         /* Download Section */
         .download-section {
-            background: linear-gradient(135deg, var(--emerald) 0%, #00b894 100%);
+            background: var(--gradient-emerald);
             color: var(--white);
             text-align: center;
-            padding: 80px 0;
+            padding: 100px 0;
         }
 
         .download-section h2 {
-            font-size: 36px;
+            font-size: 42px;
             margin-bottom: 20px;
+            font-weight: 700;
         }
 
         .download-section p {
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 40px;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
             opacity: 0.9;
@@ -635,33 +650,34 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 50px;
+            gap: 60px;
             flex-wrap: wrap;
         }
 
         .download-buttons-vertical {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
         }
 
         .qr-code {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             background-color: var(--white);
-            border-radius: 10px;
+            border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--black);
             font-weight: 600;
             flex-direction: column;
-            padding: 10px;
+            padding: 15px;
             text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .qr-code i {
-            font-size: 40px;
+            font-size: 50px;
             margin-bottom: 10px;
             color: var(--emerald);
         }
@@ -670,19 +686,19 @@
         footer {
             background-color: var(--dark-bg);
             color: var(--white);
-            padding: 60px 0 30px;
+            padding: 80px 0 30px;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
             margin-bottom: 40px;
         }
 
         .footer-column h3 {
-            font-size: 18px;
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 25px;
             color: var(--gold);
         }
 
@@ -691,17 +707,19 @@
         }
 
         .footer-links li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .footer-links a {
-            color: #aaa;
+            color: #ccc;
             text-decoration: none;
             transition: color 0.3s;
+            font-size: 15px;
         }
 
         .footer-links a:hover {
             color: var(--gold);
+            padding-left: 5px;
         }
 
         .social-links {
@@ -711,8 +729,8 @@
         }
 
         .social-links a {
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
@@ -720,11 +738,53 @@
             justify-content: center;
             color: var(--white);
             text-decoration: none;
-            transition: background-color 0.3s;
+            transition: all 0.3s;
+            font-size: 18px;
         }
+/* Screenshot Indicators */
+.screenshot-indicators {
+    display: flex;
+    gap: 8px;
+    margin: 0 20px;
+}
 
+.screenshot-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 150, 136, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0;
+}
+
+.screenshot-indicator.active {
+    background-color: var(--emerald);
+    transform: scale(1.2);
+}
+
+.screenshot-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+/* Responsive adjustments for indicators */
+@media (max-width: 768px) {
+    .screenshot-indicators {
+        display: none;
+    }
+    
+    .screenshot-nav {
+        gap: 30px;
+    }
+}
         .social-links a:hover {
             background-color: var(--emerald);
+            transform: translateY(-5px);
         }
 
         .footer-bottom {
@@ -732,218 +792,20 @@
             padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #aaa;
-            font-size: 14px;
-        }
-
-        /* App Screen Content */
-        .app-screen {
-            display: none;
-        }
-
-        .app-screen.active {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .streak-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .streak-count {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--gold);
-        }
-
-        .progress-bar {
-            height: 8px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 4px;
-            overflow: hidden;
-            margin: 10px 0;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background-color: var(--gold);
-            border-radius: 4px;
-            width: 75%;
-        }
-
-        .community-post {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 10px;
-        }
-
-        .post-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-        .post-avatar {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: var(--gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: var(--black);
-            font-weight: 600;
-        }
-
-        .post-user {
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .post-time {
-            font-size: 10px;
-            opacity: 0.7;
-        }
-
-        .post-content {
-            font-size: 12px;
-            line-height: 1.4;
-        }
-
-        .post-actions {
-            display: flex;
-            gap: 15px;
-            margin-top: 10px;
-            font-size: 12px;
-        }
-
-        .post-action {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            cursor: pointer;
-        }
-
-        /* Community Ranking Styles */
-        .ranking-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .ranking-title {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .ranking-tabs {
-            display: flex;
-            gap: 10px;
-        }
-
-        .ranking-tab {
-            font-size: 10px;
-            padding: 4px 8px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .ranking-tab.active {
-            background-color: var(--gold);
-            color: var(--black);
-        }
-
-        .ranking-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            max-height: 300px;
-            overflow-y: auto;
-        }
-
-        .ranking-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px;
-            border-radius: 8px;
-            background-color: rgba(255, 255, 255, 0.05);
-            transition: background-color 0.3s;
-        }
-
-        .ranking-item:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .rank-number {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: var(--gold);
-            color: var(--black);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            font-weight: 700;
-        }
-
-        .rank-avatar {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: var(--emerald);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: var(--white);
-            font-weight: 600;
-        }
-
-        .rank-info {
-            flex: 1;
-        }
-
-        .rank-user {
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .rank-streak {
-            font-size: 10px;
-            color: var(--gold);
-            display: flex;
-            align-items: center;
-            gap: 3px;
-        }
-
-        .rank-points {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--gold);
+            font-size: 15px;
         }
 
         /* Animations */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .fade-in {
-            animation: fadeIn 0.5s ease forwards;
+            animation: fadeIn 0.8s ease forwards;
         }
 
-        /* Responsive Styles - Updated for mobile */
+        /* Responsive Styles */
         @media (max-width: 1200px) {
             .container {
                 max-width: 1000px;
@@ -960,21 +822,22 @@
                 max-width: 100%;
             }
             
-            .phone-display-container {
-                flex-direction: column;
-            }
-            
-            .download-options {
+            .screenshot-content {
                 flex-direction: column;
                 gap: 30px;
             }
             
-            .features-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            .download-options {
+                flex-direction: column;
+                gap: 40px;
             }
             
-            .benefits {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            .features-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             }
         }
 
@@ -988,7 +851,7 @@
                 height: 100vh;
                 background-color: var(--white);
                 flex-direction: column;
-                padding: 80px 20px 20px;
+                padding: 100px 20px 20px;
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
                 z-index: 100;
                 overflow-y: auto;
@@ -1019,16 +882,7 @@
             }
             
             .section-title h2 {
-                font-size: 28px;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .phone-mockup {
-                width: 260px;
-                height: 520px;
+                font-size: 30px;
             }
             
             .section {
@@ -1036,21 +890,26 @@
             }
             
             .hero {
-                padding: 130px 0 80px;
+                padding: 130px 0 60px;
             }
             
             .download-section {
-                padding: 60px 0;
+                padding: 80px 0;
             }
             
-            header {
-                padding: 10px 0;
+            .feature-highlights {
+                grid-template-columns: 1fr;
+            }
+            
+            .phone-marquee-container {
+                max-width: 320px;
             }
         }
 
         @media (max-width: 576px) {
             .download-buttons {
-                justify-content: center;
+                flex-direction: column;
+                align-items: center;
             }
             
             .btn {
@@ -1058,17 +917,12 @@
                 justify-content: center;
             }
             
-            .phone-mockup {
-                width: 240px;
-                height: 480px;
-            }
-            
             .hero-text h1 {
                 font-size: 28px;
             }
             
             .section-title h2 {
-                font-size: 24px;
+                font-size: 26px;
             }
             
             .testimonials-grid {
@@ -1077,26 +931,37 @@
             
             .footer-content {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 40px;
             }
             
             .logo {
+                font-size: 20px;
+            }
+            
+            .hero-text .tagline {
                 font-size: 18px;
+            }
+            
+            .screenshot-content {
+                padding: 25px;
             }
         }
 
         @media (max-width: 400px) {
-            .phone-mockup {
-                width: 220px;
-                height: 440px;
-            }
-            
             .hero-text h1 {
                 font-size: 24px;
             }
             
             .container {
                 padding: 0 15px;
+            }
+            
+            .feature-card {
+                padding: 25px;
+            }
+            
+            .phone-marquee-container {
+                max-width: 280px;
             }
         }
     </style>
@@ -1111,8 +976,7 @@
             </a>
             <nav class="nav-links">
                 <a href="#features">Features</a>
-                <a href="#why-choose">Why Choose</a>
-                <a href="#interactive">App Experience</a>
+                <a href="#screenshots">Screenshots</a>
                 <a href="#testimonials">Testimonials</a>
                 <a href="#download">Download</a>
             </nav>
@@ -1126,197 +990,78 @@
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <h1>Your All-in-One Islamic Companion – SiratSync</h1>
-                <p>Stay consistent with your faith, track your habits, and access the Quran, Hadith, prayer times, and more – all in one app.</p>
-       
+                <h1>Your Complete Islamic Lifestyle Companion</h1>
+                <div class="tagline">Stay connected to your deen with ease and consistency</div>
+                <p>SiratSync is a beautifully crafted app designed to help Muslims strengthen their faith through Quran, Hadith, prayer times, duas, habit tracking, and a peaceful community – all in one clean, modern interface.</p>
+                
+                <div class="download-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.islamic.streakly" class="btn btn-primary">
+                        <i class="fab fa-google-play"></i>
+                        Download on Google Play
+                    </a>
+                    <a href="#" class="btn btn-primary">
+                        <i class="fab fa-apple"></i>
+                        Download on App Store
+                    </a>
+                    <a href="https://drive.google.com/uc?export=download&id=1rBpAFZLdP36NlHmejWpwBwSPy_Tzo2Ai" class="btn btn-secondary">
+                        <i class="fas fa-download"></i>
+                        Direct APK Download
+                    </a>
+                </div>
+                
+                <div class="feature-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Quran with Translation</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Authentic Hadith</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Prayer Times & Qibla</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Habit Tracking</span>
+                    </div>
+                </div>
+            </div>
+            
             <div class="hero-image">
-                <div class="phone-mockup">
-                    <div class="phone-notch"></div>
-                    <div class="phone-screen">
-                        <div class="app-header">
-                            <div class="app-time">12:30 PM</div>
-                            <div class="app-icons">
-                                <div class="app-icon"></div>
-                                <div class="app-icon"></div>
-                                <div class="app-icon"></div>
+                <div class="phone-marquee-container">
+                    <div class="phone-frame">
+                        <!-- Screenshot Marquee -->
+                        <div class="screenshot-marquee" id="screenshotMarquee">
+                            <!-- REPLACE THESE WITH YOUR ACTUAL SCREENSHOTS -->
+                                  <!-- Screenshot 1 -->
+                            <div class="screenshot-item">
+                                <img src="companion.jpeg" alt="SiratSync Companion Screen">
                             </div>
-                        </div>
-                        <div class="app-content">
-                            <!-- Home Screen -->
-                            <div class="app-screen active" id="home-screen">
-                                <div class="app-card">
-                                    <h3><i class="fas fa-book-quran"></i> Quran</h3>
-                                    <p>Surah Al-Fatihah - Ayah 1-7</p>
-                                </div>
-                                <div class="app-card">
-                                    <h3><i class="fas fa-clock"></i> Prayer Times</h3>
-                                    <p>Dhuhr: 12:45 PM</p>
-                                </div>
-                                <div class="app-card">
-                                    <h3><i class="fas fa-chart-line"></i> Habit Tracker</h3>
-                                    <p>15-day streak! Keep going.</p>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill"></div>
-                                    </div>
-                                </div>
-                                <div class="app-card">
-                                    <h3><i class="fas fa-hands-praying"></i> Daily Dua</h3>
-                                    <p>Morning Adhkar completed</p>
-                                </div>
-                                <div class="app-card">
-                                    <h3><i class="fas fa-calendar-days"></i> Islamic Calendar</h3>
-                                    <p>Ramadan starts in 15 days</p>
-                                </div>
+                            <!-- Screenshot 1 -->
+                            <div class="screenshot-item">
+                                <img src="Quran.jpeg" alt="SiratSync Quran Screen">
+                            </div>
+                            <!-- Screenshot 3 -->
+                            <div class="screenshot-item">
+                                <img src="hadiths.jpeg" alt="SiratSync Hadith Screen">
                             </div>
 
-                            <!-- Ibadah Screen -->
-                            <div class="app-screen" id="ibadah-screen">
-                                <div class="app-card">
-                                    <h3><i class="fas fa-clock"></i> Salah Tracker</h3>
-                                    <p>4/5 prayers completed today</p>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 80%"></div>
-                                    </div>
-                                </div>
-                                <div class="app-card">
-                                    <h3><i class="fas fa-book-quran"></i> Quran Progress</h3>
-                                    <p>You've read 12 pages today</p>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 60%"></div>
-                                    </div>
-                                </div>
-                                <div class="app-card">
-                                    <h3><i class="fas fa-list-ol"></i> Tasbih Counter</h3>
-                                    <p>SubhanAllah: 32 | Alhamdulillah: 25 | Allahu Akbar: 18</p>
-                                </div>
-                                <div class="app-card">
-                                    <h3><i class="fas fa-hands-praying"></i> Dua Collection</h3>
-                                    <p>12 Duas bookmarked</p>
-                                </div>
+                                                              <!-- Screenshot 4 -->
+                            <div class="screenshot-item">
+                                <img src="qibla.jpeg" alt="SiratSync Qibla direction">
                             </div>
-
-                            <!-- Streaks Screen -->
-                            <div class="app-screen" id="streaks-screen">
-                                <div class="app-card">
-                                    <div class="streak-container">
-                                        <h3><i class="fas fa-fire"></i> Current Streak</h3>
-                                        <div class="streak-count">15 days</div>
-                                    </div>
-                                    <p>Don't break your Salah streak!</p>
-                                </div>
-                                <div class="app-card">
-                                    <h3><i class="fas fa-trophy"></i> Achievements</h3>
-                                    <p>Completed 30 days of Quran reading</p>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 100%"></div>
-                                    </div>
-                                </div>
-                                <div class="app-card">
-                                    <h3><i class="fas fa-chart-bar"></i> Monthly Stats</h3>
-                                    <p>Salah: 95% | Quran: 80% | Fasting: 100%</p>
-                                </div>
-                                <div class="app-card">
-                                    <h3><i class="fas fa-star"></i> Goals</h3>
-                                    <p>Memorize Juz 30 - 45% complete</p>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 45%"></div>
-                                    </div>
-                                </div>
+                            <!-- Screenshot 5 -->
+                            <div class="screenshot-item">
+                                <img src="prayerNotfications.jpeg" alt="SiratSync Prayer Notifications">
                             </div>
-
-                            <!-- Community Screen -->
-                            <div class="app-screen" id="community-screen">
-                                <div class="ranking-header">
-                                    <div class="ranking-title">Community Ranking</div>
-                                    <div class="ranking-tabs">
-                                        <div class="ranking-tab active">Weekly</div>
-                                        <div class="ranking-tab">Monthly</div>
-                                        <div class="ranking-tab">All Time</div>
-                                    </div>
-                                </div>
-                                <div class="ranking-list">
-                                    <div class="ranking-item">
-                                        <div class="rank-number">1</div>
-                                        <div class="rank-avatar">M</div>
-                                        <div class="rank-info">
-                                            <div class="rank-user">Momin</div>
-                                            <div class="rank-streak"><i class="fas fa-fire"></i> 42 days</div>
-                                        </div>
-                                        <div class="rank-points">1,240</div>
-                                    </div>
-                                    <div class="ranking-item">
-                                        <div class="rank-number">2</div>
-                                        <div class="rank-avatar">Q</div>
-                                        <div class="rank-info">
-                                            <div class="rank-user">Qasim</div>
-                                            <div class="rank-streak"><i class="fas fa-fire"></i> 35 days</div>
-                                        </div>
-                                        <div class="rank-points">1,150</div>
-                                    </div>
-                                    <div class="ranking-item">
-                                        <div class="rank-number">3</div>
-                                        <div class="rank-avatar">A</div>
-                                        <div class="rank-info">
-                                            <div class="rank-user">Auzair</div>
-                                            <div class="rank-streak"><i class="fas fa-fire"></i> 28 days</div>
-                                        </div>
-                                        <div class="rank-points">980</div>
-                                    </div>
-                                    <div class="ranking-item">
-                                        <div class="rank-number">4</div>
-                                        <div class="rank-avatar">S</div>
-                                        <div class="rank-info">
-                                            <div class="rank-user">Sarah</div>
-                                            <div class="rank-streak"><i class="fas fa-fire"></i> 21 days</div>
-                                        </div>
-                                        <div class="rank-points">850</div>
-                                    </div>
-                                    <div class="ranking-item">
-                                        <div class="rank-number">5</div>
-                                        <div class="rank-avatar">H</div>
-                                        <div class="rank-info">
-                                            <div class="rank-user">Hamza</div>
-                                            <div class="rank-streak"><i class="fas fa-fire"></i> 18 days</div>
-                                        </div>
-                                        <div class="rank-points">720</div>
-                                    </div>
-                                </div>
-                                <div class="community-post">
-                                    <div class="post-header">
-                                        <div class="post-avatar">Q</div>
-                                        <div>
-                                            <div class="post-user">Qasim</div>
-                                            <div class="post-time">2 hours ago</div>
-                                        </div>
-                                    </div>
-                                    <div class="post-content">
-                                        Just completed my morning Adhkar with SiratSync reminders. Alhamdulillah for this blessed app!
-                                    </div>
-                                    <div class="post-actions">
-                                        <div class="post-action"><i class="far fa-heart"></i> 12</div>
-                                        <div class="post-action"><i class="far fa-comment"></i> 3</div>
-                                    </div>
-                                </div>
-                            </div>
+    
                         </div>
-                        <div class="app-footer">
-                            <div class="app-nav-item active" data-tab="home-screen">
-                                <i class="fas fa-home"></i>
-                                <span>Home</span>
-                            </div>
-                            <div class="app-nav-item" data-tab="ibadah-screen">
-                                <i class="fas fa-hands-praying"></i>
-                                <span>Ibadah</span>
-                            </div>
-                            <div class="app-nav-item" data-tab="streaks-screen">
-                                <i class="fas fa-fire"></i>
-                                <span>Streaks</span>
-                            </div>
-                            <div class="app-nav-item" data-tab="community-screen">
-                                <i class="fas fa-users"></i>
-                                <span>Community</span>
-                            </div>
-                        </div>
+                    </div>
+                    
+                    <div class="marquee-controls" id="marqueeControls">
+                        <!-- Buttons will be generated by JavaScript -->
                     </div>
                 </div>
             </div>
@@ -1327,375 +1072,371 @@
     <section class="section" id="features">
         <div class="container">
             <div class="section-title">
-                <h2>Core Features</h2>
-                <p>Everything you need to strengthen your faith and build consistent Islamic habits</p>
+                <h2>Everything You Need for Spiritual Growth</h2>
+                <p>SiratSync brings together all essential Islamic tools in one beautifully designed app</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-book-quran"></i>
                     </div>
-                    <h3>Quran with Translation</h3>
-                    <p>Read the Quran with multiple translations</p>
+                    <h3>Beautiful Quran Reading</h3>
+                    <p>Read the Noble Quran in elegant script with English translation and adjustable settings for a personalized experience.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Adjustable font size & spacing</li>
+                        <li><i class="fas fa-check"></i> Multiple reading themes</li>
+                        <li><i class="fas fa-check"></i> Bookmark ayahs for quick access</li>
+                        <li><i class="fas fa-check"></i> Clean Mushaf-style layout</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Authentic Hadith Collections</h3>
+                    <p>Access authentic Hadith from Sahih al-Bukhari and Sahih Muslim with easy browsing and search functionality.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Browse by book and chapter</li>
+                        <li><i class="fas fa-check"></i> Daily Hadith reminders</li>
+                        <li><i class="fas fa-check"></i> Save and share Hadiths</li>
+                        <li><i class="fas fa-check"></i> More books coming soon</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-mosque"></i>
                     </div>
-                    <h3>Hadith Collections</h3>
-                    <p>Access authentic Hadith from major collections with search functionality</p>
+                    <h3>Accurate Prayer Times</h3>
+                    <p>Never miss a prayer with auto-calculated times based on your location with multiple calculation methods.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Auto-location detection</li>
+                        <li><i class="fas fa-check"></i> Adhan alerts & early reminders</li>
+                        <li><i class="fas fa-check"></i> Ramadan mode with Suhoor/Iftar</li>
+                        <li><i class="fas fa-check"></i> Supports major madhhabs</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-compass"></i>
                     </div>
-                    <h3>Prayer Times</h3>
-                    <p>Accurate prayer times based on your location and a digital Qibla compass</p>
+                    <h3>Qibla Direction</h3>
+                    <p>Find the Qibla direction with high-accuracy compass that works both online and offline.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> High-accuracy compass</li>
+                        <li><i class="fas fa-check"></i> Real-time responsiveness</li>
+                        <li><i class="fas fa-check"></i> Works offline once calibrated</li>
+                        <li><i class="fas fa-check"></i> Visual indicators</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-hands-praying"></i>
                     </div>
-                    <h3>Daily Dua Collection</h3>
-                    <p>Comprehensive collection of Duas for daily activities and special occasions</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-star-and-crescent"></i>
-                    </div>
-                    <h3>99 Names of Allah</h3>
-                    <p>Learn and reflect upon the beautiful names and attributes of Allah</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-list-ol"></i>
-                    </div>
-                    <h3>Tasbih Counter</h3>
-                    <p>Digital Tasbih counter to help you remember and count your Dhikr</p>
+                    <h3>Duas & Supplications</h3>
+                    <p>Comprehensive collection of authentic duas from Quran and Sunnah for all occasions.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Arabic with translation</li>
+                        <li><i class="fas fa-check"></i> Organized by categories</li>
+                        <li><i class="fas fa-check"></i> Bookmark favorite duas</li>
+                        <li><i class="fas fa-check"></i> Daily dua reminders</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Islamic Habit Tracking</h3>
-                    <p>Track your Salah, Quran reading, fasting and other Islamic practices</p>
+                    <h3>Habit Tracking</h3>
+                    <p>Build consistent worship habits with streak tracking and progress monitoring.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Track Salah, Quran, Dhikr, Fasting</li>
+                        <li><i class="fas fa-check"></i> Earn streaks for motivation</li>
+                        <li><i class="fas fa-check"></i> Clean progress charts</li>
+                        <li><i class="fas fa-check"></i> Personalized reminders</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-calendar-days"></i>
-                    </div>
-                    <h3>Islamic Calendar & Events</h3>
-                    <p>Islamic dates, holidays, and important events with notifications</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Section -->
-    <section class="section why-choose" id="why-choose">
-        <div class="container">
-            <div class="section-title">
-                <h2>Why Choose SiratSync?</h2>
-                <p>Discover what makes our Islamic app the perfect companion for your spiritual journey</p>
-            </div>
-            <div class="benefits">
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <div class="benefit-content">
-                        <h3>All-in-One Solution</h3>
-                        <p>A single app for all your Islamic needs - no need for multiple apps cluttering your device.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <div class="benefit-content">
-                        <h3>Beautiful Islamic Design</h3>
-                        <p>Minimal interface with Islamic aesthetics that creates a peaceful user experience.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-wifi"></i>
-                    </div>
-                    <div class="benefit-content">
-                        <h3>Works Offline</h3>
-                        <p>Access Quran, Hadith, and Duas even without an internet connection.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div class="benefit-content">
-                        <h3>Lightweight & Fast</h3>
-                        <p>Optimized for all devices with quick loading times and smooth performance.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <div class="benefit-content">
-                        <h3>Community-Driven Updates</h3>
-                        <p>Regular updates with authentic Islamic content suggested by our user community.</p>
-                    </div>
+                    <h3>Peaceful Community</h3>
+                    <p>Connect with other Muslims in a safe, moderated space built with Islamic adab.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Share Islamic reminders & reflections</li>
+                        <li><i class="fas fa-check"></i> Follow other users</li>
+                        <li><i class="fas fa-check"></i> Private/public Statistics</li>
+                        <li><i class="fas fa-check"></i> Strict moderation & safety features</li>
+                    </ul>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-shield-alt"></i>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
                     </div>
-                    <div class="benefit-content">
-                        <h3>Privacy Focused</h3>
-                        <p>Your data stays private. We don't track or sell your personal information.</p>
-                    </div>
+                    <h3>Multilingual Support</h3>
+                    <p>Access the app in multiple languages with more being added regularly.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> English, Urdu, Hindi, Arabic, Malay</li>
+                        <li><i class="fas fa-check"></i> More languages coming soon</li>
+                        <li><i class="fas fa-check"></i> Shahada in 14 languages</li>
+                        <li><i class="fas fa-check"></i> Easy language switching</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Phone Display Section -->
-    <section class="section interactive-phone" id="interactive">
-        <div class="container">
-            <div class="section-title">
-                <h2>Experience SiratSync</h2>
-                <p>Explore the key features of our app through this interactive demonstration</p>
-            </div>
-            <div class="phone-display-container">
-                <div class="phone-tabs">
-                    <div class="tab-selector">
-                        <button class="tab-btn active" data-tab="home-screen">
-                            <i class="fas fa-home"></i>
-                            <div>
-                                <h3>Home Dashboard</h3>
-                                <p>Your daily spiritual overview with quick access to all features</p>
-                            </div>
-                        </button>
-                        <button class="tab-btn" data-tab="ibadah-screen">
-                            <i class="fas fa-hands-praying"></i>
-                            <div>
-                                <h3>Ibadah Tracker</h3>
-                                <p>Monitor your prayers, Quran reading, and other acts of worship</p>
-                            </div>
-                        </button>
-                        <button class="tab-btn" data-tab="streaks-screen">
-                            <i class="fas fa-fire"></i>
-                            <div>
-                                <h3>Streaks & Goals</h3>
-                                <p>Track your progress and maintain consistency in your worship</p>
-                            </div>
-                        </button>
-                        <button class="tab-btn" data-tab="community-screen">
-                            <i class="fas fa-users"></i>
-                            <div>
-                                <h3>Community</h3>
-                                <p>Connect with other Muslims and share your spiritual journey</p>
-                            </div>
-                        </button>
+<!-- Screenshots Section -->
+<section class="section screenshots-section" id="screenshots">
+    <div class="container">
+        <div class="section-title">
+            <h2>Experience the Beautiful Interface</h2>
+            <p>Explore all the powerful features of SiratSync through these app screenshots</p>
+        </div>
+        
+        <div class="screenshots-container">
+            <div class="screenshot-track">
+                <!-- Screenshot 1: Quran -->
+                <div class="screenshot-slide">
+                    <div class="screenshot-content">
+                        <div class="screenshot-text">
+                            <h3><i class="fas fa-book-quran"></i> Quran with Beautiful Typography</h3>
+                            <p>Distraction-free Quran reading experience with elegant Arabic script, clear translation, and customizable display settings. Bookmark verses, adjust font sizes, and choose from multiple themes.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Elegant Arabic typography & Mushaf-style layout</li>
+                                <li><i class="fas fa-check"></i> Multiple translation options (English & more)</li>
+                                <li><i class="fas fa-check"></i> Adjustable font size, spacing & reading themes</li>
+                                <li><i class="fas fa-check"></i> Bookmark ayahs for quick access</li>
+                                <li><i class="fas fa-check"></i> Works completely offline</li>
+                            </ul>
+                        </div>
+                        <div class="screenshot-image">
+                            <!-- REPLACE WITH YOUR ACTUAL QURAN SCREENSHOT -->
+                            <img src="Quran.jpeg" alt="SiratSync Quran Screen">
+                        </div>
                     </div>
                 </div>
-                <div class="phone-display">
-                    <div class="phone-mockup">
-                        <div class="phone-notch"></div>
-                        <div class="phone-screen">
-                            <div class="app-header">
-                                <div class="app-time">12:30 PM</div>
-                                <div class="app-icons">
-                                    <div class="app-icon"></div>
-                                    <div class="app-icon"></div>
-                                    <div class="app-icon"></div>
-                                </div>
-                            </div>
-                            <div class="app-content">
-                                <!-- Home Screen -->
-                                <div class="app-screen active" id="interactive-home-screen">
-                                    <div class="app-card">
-                                        <h3><i class="fas fa-book-quran"></i> Quran</h3>
-                                        <p>Surah Al-Fatihah - Ayah 1-7</p>
-                                    </div>
-                                    <div class="app-card">
-                                        <h3><i class="fas fa-clock"></i> Prayer Times</h3>
-                                        <p>Dhuhr: 12:45 PM</p>
-                                    </div>
-                                    <div class="app-card">
-                                        <h3><i class="fas fa-chart-line"></i> Habit Tracker</h3>
-                                        <p>15-day streak! Keep going.</p>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill"></div>
-                                        </div>
-                                    </div>
-                                    <div class="app-card">
-                                        <h3><i class="fas fa-hands-praying"></i> Daily Dua</h3>
-                                        <p>Morning Adhkar completed</p>
-                                    </div>
-                                </div>
-
-                                <!-- Ibadah Screen -->
-                                <div class="app-screen" id="interactive-ibadah-screen">
-                                    <div class="app-card">
-                                        <h3><i class="fas fa-clock"></i> Salah Tracker</h3>
-                                        <p>4/5 prayers completed today</p>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 80%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="app-card">
-                                        <h3><i class="fas fa-book-quran"></i> Quran Progress</h3>
-                                        <p>You've read 12 pages today</p>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 60%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="app-card">
-                                        <h3><i class="fas fa-list-ol"></i> Tasbih Counter</h3>
-                                        <p>SubhanAllah: 32 | Alhamdulillah: 25 | Allahu Akbar: 18</p>
-                                    </div>
-                                </div>
-
-                                <!-- Streaks Screen -->
-                                <div class="app-screen" id="interactive-streaks-screen">
-                                    <div class="app-card">
-                                        <div class="streak-container">
-                                            <h3><i class="fas fa-fire"></i> Current Streak</h3>
-                                            <div class="streak-count">15 days</div>
-                                        </div>
-                                        <p>Don't break your Salah streak!</p>
-                                    </div>
-                                    <div class="app-card">
-                                        <h3><i class="fas fa-trophy"></i> Achievements</h3>
-                                        <p>Completed 30 days of Quran reading</p>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 100%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="app-card">
-                                        <h3><i class="fas fa-chart-bar"></i> Monthly Stats</h3>
-                                        <p>Salah: 95% | Quran: 80% | Fasting: 100%</p>
-                                    </div>
-                                </div>
-
-                                <!-- Community Screen -->
-                                <div class="app-screen" id="interactive-community-screen">
-                                    <div class="ranking-header">
-                                        <div class="ranking-title">Community Ranking</div>
-                                        <div class="ranking-tabs">
-                                            <div class="ranking-tab active">Weekly</div>
-                                            <div class="ranking-tab">Monthly</div>
-                                            <div class="ranking-tab">All Time</div>
-                                        </div>
-                                    </div>
-                                    <div class="ranking-list">
-                                        <div class="ranking-item">
-                                            <div class="rank-number">1</div>
-                                            <div class="rank-avatar">M</div>
-                                            <div class="rank-info">
-                                                <div class="rank-user">Momin</div>
-                                                <div class="rank-streak"><i class="fas fa-fire"></i> 42 days</div>
-                                            </div>
-                                            <div class="rank-points">1,240</div>
-                                        </div>
-                                        <div class="ranking-item">
-                                            <div class="rank-number">2</div>
-                                            <div class="rank-avatar">Q</div>
-                                            <div class="rank-info">
-                                                <div class="rank-user">Mohd Q.</div>
-                                                <div class="rank-streak"><i class="fas fa-fire"></i> 35 days</div>
-                                            </div>
-                                            <div class="rank-points">1,150</div>
-                                        </div>
-                                        <div class="ranking-item">
-                                            <div class="rank-number">3</div>
-                                            <div class="rank-avatar">A</div>
-                                            <div class="rank-info">
-                                                <div class="rank-user">Auzair</div>
-                                                <div class="rank-streak"><i class="fas fa-fire"></i> 28 days</div>
-                                            </div>
-                                            <div class="rank-points">980</div>
-                                        </div>
-                                        <div class="ranking-item">
-                                            <div class="rank-number">4</div>
-                                            <div class="rank-avatar">S</div>
-                                            <div class="rank-info">
-                                                <div class="rank-user">Sarah</div>
-                                                <div class="rank-streak"><i class="fas fa-fire"></i> 21 days</div>
-                                            </div>
-                                            <div class="rank-points">850</div>
-                                        </div>
-                                        <div class="ranking-item">
-                                            <div class="rank-number">5</div>
-                                            <div class="rank-avatar">H</div>
-                                            <div class="rank-info">
-                                                <div class="rank-user">Hamza</div>
-                                                <div class="rank-streak"><i class="fas fa-fire"></i> 18 days</div>
-                                            </div>
-                                            <div class="rank-points">720</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="app-footer">
-                                <div class="app-nav-item active" data-tab="interactive-home-screen">
-                                    <i class="fas fa-home"></i>
-                                    <span>Home</span>
-                                </div>
-                                <div class="app-nav-item" data-tab="interactive-ibadah-screen">
-                                    <i class="fas fa-hands-praying"></i>
-                                    <span>Ibadah</span>
-                                </div>
-                                <div class="app-nav-item" data-tab="interactive-streaks-screen">
-                                    <i class="fas fa-fire"></i>
-                                    <span>Streaks</span>
-                                </div>
-                                <div class="app-nav-item" data-tab="interactive-community-screen">
-                                    <i class="fas fa-users"></i>
-                                    <span>Community</span>
-                                </div>
-                            </div>
+                
+                <!-- Screenshot 2: Hadith Collections -->
+                <div class="screenshot-slide">
+                    <div class="screenshot-content">
+                        <div class="screenshot-text">
+                            <h3><i class="fas fa-book-open"></i> Authentic Hadith Collections</h3>
+                            <p>Access authentic Hadith from Sahih al-Bukhari and Sahih Muslim with organized browsing, search functionality, and daily reminders.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Sahih al-Bukhari & Sahih Muslim collections</li>
+                                <li><i class="fas fa-check"></i> Browse Hadith by book and chapter</li>
+                                <li><i class="fas fa-check"></i> Search functionality for easy access</li>
+                                <li><i class="fas fa-check"></i> Daily Hadith reminders</li>
+                                <li><i class="fas fa-check"></i> Save and share favorite Hadiths</li>
+                                <li><i class="fas fa-check"></i> More Hadith books coming soon</li>
+                            </ul>
+                        </div>
+                        <div class="screenshot-image">
+                            <!-- REPLACE WITH YOUR ACTUAL HADITH SCREENSHOT -->
+                            <img src="hadiths.jpeg" alt="SiratSync Hadith Collections">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Screenshot 3: Prayer Times & Qibla -->
+                <div class="screenshot-slide">
+                    <div class="screenshot-content">
+                        <div class="screenshot-text">
+                            <h3><i class="fas fa-mosque"></i> Accurate Prayer Times & Qibla Direction</h3>
+                            <p>Never miss a prayer with auto-calculated times based on your location and find the Qibla direction with high-accuracy compass.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Auto-calculated prayer times based on location</li>
+                                <li><i class="fas fa-check"></i> Supports major calculation methods & madhhabs</li>
+                                <li><i class="fas fa-check"></i> Adhan alerts with early reminders</li>
+                                <li><i class="fas fa-check"></i> High-accuracy Qibla compass</li>
+                                <li><i class="fas fa-check"></i> Ramadan mode with Suhoor & Iftar timings</li>
+                                <li><i class="fas fa-check"></i> Works offline once calibrated</li>
+                            </ul>
+                        </div>
+                        <div class="screenshot-image">
+                            <!-- REPLACE WITH YOUR ACTUAL PRAYER TIMES SCREENSHOT -->
+                            <img src="prayertimes.jpeg" alt="SiratSync Prayer Times & Qibla">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Screenshot 4: Habit Tracking -->
+                <div class="screenshot-slide">
+                    <div class="screenshot-content">
+                        <div class="screenshot-text">
+                            <h3><i class="fas fa-chart-line"></i> Habit Tracking & Streaks</h3>
+                            <p>Build consistent worship habits with visual tracking and streak motivation. Monitor your Salah, Quran reading, fasting, and dhikr with beautiful progress charts.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Track Salah, Quran, Dhikr, Fasting & more</li>
+                                <li><i class="fas fa-check"></i> Earn streaks to stay motivated</li>
+                                <li><i class="fas fa-check"></i> Clean progress charts and visual tracking</li>
+                                <li><i class="fas fa-check"></i> Personalized reminders for consistency</li>
+                                <li><i class="fas fa-check"></i> Achievement badges and milestones</li>
+                            </ul>
+                        </div>
+                        <div class="screenshot-image">
+                            <!-- REPLACE WITH YOUR ACTUAL HABIT TRACKER SCREENSHOT -->
+                            <img src="tools.jpeg" alt="SiratSync Habit Tracker">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Screenshot 5: Community & Social -->
+                <div class="screenshot-slide">
+                    <div class="screenshot-content">
+                        <div class="screenshot-text">
+                            <h3><i class="fas fa-users"></i> Islamic Community & Social Features</h3>
+                            <p>Connect with like-minded Muslims in a peaceful, moderated community. Share beneficial content, follow others, and build meaningful connections.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Upload Islamic reminders, duas & reflections</li>
+                                <li><i class="fas fa-check"></i> Follow other users and build connections</li>
+                                <li><i class="fas fa-check"></i> Search posts and users easily</li>
+                                <li><i class="fas fa-check"></i> Set private or public Statistics</li>
+                                <li><i class="fas fa-check"></i> Receive notifications for interactions</li>
+                                <li><i class="fas fa-check"></i> Strict moderation & community guidelines</li>
+                            </ul>
+                        </div>
+                        <div class="screenshot-image">
+                            <!-- REPLACE WITH YOUR ACTUAL COMMUNITY SCREENSHOT -->
+                            <img src="community.jpeg" alt="SiratSync Community">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Screenshot 7: Tasbih Counter & Duas -->
+                <div class="screenshot-slide">
+                    <div class="screenshot-content">
+                        <div class="screenshot-text">
+                            <h3><i class="fas fa-list-ol"></i> Tasbih Counter & Duas Collection</h3>
+                            <p>Count your dhikr with a smooth digital tasbih and access a comprehensive collection of authentic duas from Quran and Sunnah.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Smooth digital tasbih counter</li>
+                                <li><i class="fas fa-check"></i> Authentic duas from Quran & Sunnah</li>
+                                <li><i class="fas fa-check"></i> Arabic + translation for each dua</li>
+                                <li><i class="fas fa-check"></i> Bookmark favorite duas for quick access</li>
+                            </ul>
+                        </div>
+                        <div class="screenshot-image">
+                            <!-- REPLACE WITH YOUR ACTUAL TASBIH/DUAS SCREENSHOT -->
+                            <img src="duatasbih.jpg" alt="SiratSync Tasbih & Duas">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Screenshot 8: Multilingual Support -->
+                <div class="screenshot-slide">
+                    <div class="screenshot-content">
+                        <div class="screenshot-text">
+                            <h3><i class="fas fa-globe"></i> Multilingual Support</h3>
+                            <p>Access SiratSync in multiple languages with seamless switching and comprehensive language support for all features.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> English, Urdu, Hindi, Arabic, Malay</li>
+                                <li><i class="fas fa-check"></i> More languages coming soon</li>
+                                <li><i class="fas fa-check"></i> Shahada in 14 different languages</li>
+                                <li><i class="fas fa-check"></i> Easy language switching</li>
+                                <li><i class="fas fa-check"></i> Full app interface translation</li>
+                            </ul>
+                        </div>
+                        <div class="screenshot-image">
+                            <!-- REPLACE WITH YOUR ACTUAL LANGUAGE SETTINGS SCREENSHOT -->
+                            <img src="multilang.jpeg" alt="SiratSync Multilingual Support">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Screenshot 9: Offline Features -->
+                <div class="screenshot-slide">
+                    <div class="screenshot-content">
+                        <div class="screenshot-text">
+                            <h3><i class="fas fa-wifi"></i> Complete Offline Access</h3>
+                            <p>Use SiratSync anywhere, anytime with comprehensive offline functionality for all core features.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Quran - Full text with translation</li>
+                                <li><i class="fas fa-check"></i> Bukhari & Muslim Hadith collections</li>
+                                <li><i class="fas fa-check"></i> Duas collection & Tasbih counter</li>
+                                <li><i class="fas fa-check"></i> Qibla direction (once calibrated) but prefer Online</li>
+                                <li><i class="fas fa-check"></i> Aurad-e-Fatiha (download once)</li>
+                                <li><i class="fas fa-check"></i> Cached prayer times</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Screenshot 10: Themes & Customization -->
+                <div class="screenshot-slide">
+                    <div class="screenshot-content">
+                        <div class="screenshot-text">
+                            <h3><i class="fas fa-palette"></i> Beautiful Themes & Customization</h3>
+                            <p>Personalize your SiratSync experience with beautiful Islamic-themed designs and customization options.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Light, Dark and Emerald Islamic themes</li>
+                                <li><i class="fas fa-check"></i> Customizable Quran reading themes</li>
+                                <li><i class="fas fa-check"></i> Adjustable font sizes and spacing</li>
+                                <li><i class="fas fa-check"></i> Prayer time display customization</li>
+                                <li><i class="fas fa-check"></i> Personalized notification settings</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <div class="screenshot-nav">
+                <button class="screenshot-nav-btn prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="screenshot-indicators">
+                    <button class="screenshot-indicator active" data-slide="0"></button>
+                    <button class="screenshot-indicator" data-slide="1"></button>
+                    <button class="screenshot-indicator" data-slide="2"></button>
+                    <button class="screenshot-indicator" data-slide="3"></button>
+                    <button class="screenshot-indicator" data-slide="4"></button>
+                    <button class="screenshot-indicator" data-slide="5"></button>
+                    <button class="screenshot-indicator" data-slide="6"></button>
+                    <button class="screenshot-indicator" data-slide="7"></button>
+                    <button class="screenshot-indicator" data-slide="8"></button>
+                </div>
+                <button class="screenshot-nav-btn next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Testimonials Section -->
     <section class="section testimonials" id="testimonials">
         <div class="container">
             <div class="section-title">
-                <h2>What Our Users Say</h2>
+                <h2>Loved by the Muslim Community</h2>
                 <p>Join thousands of Muslims who have transformed their spiritual journey with SiratSync</p>
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "SiratSync keeps me on track with my Salah and daily Quran recitation. The habit tracker has helped me build consistency in my worship. The interface is so peaceful and easy to use."
+                        "SiratSync is amazing. The habit tracking keeps me consistent with my Salah and Quran reading. The beautiful interface makes it a joy to use every day. JazakAllah Khair to the Developer!"
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-avatar">M</div>
+                        <div class="author-avatar">U</div>
                         <div class="author-info">
-                            <h4>Momin</h4>
-                            <p>Student, Srinagar</p>
+                            <h4>Umer Akbar</h4>
+                            <p>Student, Kupwara</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "Finally, one app that has Quran, Hadith, Duas, Community and many more all together! The community feature helps me stay motivated and connected with others, and the accurate prayer times are a blessing."
+                        "As someone who travels frequently, having accurate prayer times and Qibla direction in one app is invaluable. The offline access to Quran and Hadith is perfect for when I don't have internet. This is the Islamic app I need on my phone."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">Q</div>
                         <div class="author-info">
-                            <h4>Qasim Khazir malik</h4>
-                            <p>Mathematician, Kashmir</p>
+                            <h4>Qasim Khazir Malik</h4>
+                            <p>Mathematis teacher, Kupwara</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "SiratSync has been invaluable in helping me learn about Islam. The Dua collection and prayer times are especially helpful. The design is beautiful and intuitive."
+                        "The community feature in SiratSync is amazing! It's a safe space to share Islamic reminders and connect with other Muslims. The moderation ensures that the content remains beneficial and authentic. May Allah reward the creators."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">A</div>
@@ -1713,10 +1454,10 @@
     <section class="download-section" id="download">
         <div class="container">
             <h2>Start Your Spiritual Journey Today</h2>
-            <p>Download SiratSync now and take the first step towards a more consistent and fulfilling Islamic lifestyle</p>
+            <p>Download SiratSync now and experience a comprehensive Islamic lifestyle app designed with love for the Ummah</p>
             <div class="download-options">
                 <div class="download-buttons-vertical">
-                    <a href="#" class="btn btn-primary">
+                    <a href="https://play.google.com/store/apps/details?id=com.islamic.streakly" class="btn btn-primary">
                         <i class="fab fa-google-play"></i>
                         Download on Google Play
                     </a>
@@ -1724,16 +1465,20 @@
                         <i class="fab fa-apple"></i>
                         Download on App Store
                     </a>
-                    <a href = "https://drive.google.com/uc?export=download&id=1rBpAFZLdP36NlHmejWpwBwSPy_Tzo2Ai">
+                    <a href="https://drive.google.com/uc?export=download&id=1rBpAFZLdP36NlHmejWpwBwSPy_Tzo2Ai" class="btn btn-secondary">
                         <i class="fas fa-download"></i>
                         Direct APK Download
                     </a>
                 </div>
                 <div class="qr-code">
                     <i class="fas fa-qrcode"></i>
-                    Scan to Download
+                    <span>Scan to Download</span>
+                    <small>Point your camera at the QR code</small>
                 </div>
             </div>
+            <p style="margin-top: 40px; font-size: 16px; opacity: 0.8;">
+                <i class="fas fa-star"></i> 100% Free • No Ads • Privacy Focused • Regular Updates
+            </p>
         </div>
     </section>
 
@@ -1743,30 +1488,39 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>SiratSync</h3>
-                    <p>Your all-in-one Islamic companion for Quran, Hadith, prayer times, and habit tracking.</p>
+                    <p>Your all-in-one Islamic companion for spiritual growth and consistent worship. Built with simplicity, authenticity, and user comfort in mind.</p>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/__kaiserlone34?igsh=Y2JqeWowYXU3OWdr"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+    <a href="https://www.instagram.com/__kaiserlone34?igsh=Y2JqeWowYXU3OWdr" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/919541871382" target="_blank" title="Contact on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.facebook.com/share/1eQfmhDGLX/" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.youtube.com/@SiratSync" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
+</div>
+</div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#features">Features</a></li>
-                        <li><a href="#why-choose">Why Choose Us</a></li>
-                        <li><a href="#interactive">App Experience</a></li>
+                        <li><a href="#screenshots">Screenshots</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#download">Download</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Support</h3>
+                    <h3>Support and legal</h3>
                     <ul class="footer-links">
                         <li><a href="AboutUs.html">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
                         <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="terms.html">Terms of Service</a></li>
                         <li><a href="FAQs.html">FAQ</a></li>
-                        <li><a href = "delete.html">Delete SiratSync account</a></li>
+                        <li><a href="delete.html">Delete Account</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1774,12 +1528,12 @@
                     <ul class="footer-links">
                         <li><i class="fas fa-envelope"></i> Siratsync@gmail.com</li>
                         <li><i class="fas fa-phone"></i> +91 954-187-1382</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Kupwara , Jammu and Kashmir</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kupwara, Jammu and Kashmir</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Copyright © 2025 SiratSync. All rights reserved.</p>
+                <p>Copyright © 2025 SiratSync. All rights reserved. | Your complete Islamic lifestyle companion</p>
             </div>
         </div>
     </footer>
@@ -1801,73 +1555,120 @@
             });
         });
 
-        // App Navigation Tabs
-        const navItems = document.querySelectorAll('.app-nav-item');
-        navItems.forEach(item => {
-            item.addEventListener('click', function() {
-                const tabId = this.getAttribute('data-tab');
-                
-                // Remove active class from all nav items and screens
-                document.querySelectorAll('.app-nav-item').forEach(nav => {
-                    nav.classList.remove('active');
-                });
-                document.querySelectorAll('.app-screen').forEach(screen => {
-                    screen.classList.remove('active');
-                });
-                
-                // Add active class to clicked nav item and corresponding screen
-                this.classList.add('active');
-                document.getElementById(tabId).classList.add('active');
+        // Screenshot Marquee Functionality
+        const screenshotMarquee = document.getElementById('screenshotMarquee');
+        const marqueeControls = document.getElementById('marqueeControls');
+        const screenshotItems = document.querySelectorAll('.screenshot-item');
+        let currentMarqueeIndex = 0;
+        let marqueeInterval;
+
+        // Screenshot Slider with Indicators
+const screenshotTrack = document.querySelector('.screenshot-track');
+const screenshotSlides = document.querySelectorAll('.screenshot-slide');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const indicators = document.querySelectorAll('.screenshot-indicator');
+let currentSlide = 0;
+
+function updateSlidePosition() {
+    screenshotTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // Update active indicator
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentSlide);
+    });
+}
+
+prevBtn.addEventListener('click', function() {
+    currentSlide = (currentSlide - 1 + screenshotSlides.length) % screenshotSlides.length;
+    updateSlidePosition();
+});
+
+nextBtn.addEventListener('click', function() {
+    currentSlide = (currentSlide + 1) % screenshotSlides.length;
+    updateSlidePosition();
+});
+
+// Add click events to indicators
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        currentSlide = index;
+        updateSlidePosition();
+    });
+});
+
+// Auto-slide functionality (optional)
+let autoSlideInterval = setInterval(() => {
+    currentSlide = (currentSlide + 1) % screenshotSlides.length;
+    updateSlidePosition();
+}, 5000);
+
+// Pause auto-slide on hover
+const screenshotContainer = document.querySelector('.screenshots-container');
+screenshotContainer.addEventListener('mouseenter', () => {
+    clearInterval(autoSlideInterval);
+});
+
+screenshotContainer.addEventListener('mouseleave', () => {
+    autoSlideInterval = setInterval(() => {
+        currentSlide = (currentSlide + 1) % screenshotSlides.length;
+        updateSlidePosition();
+    }, 5000);
+});
+
+        // Generate control buttons based on number of screenshots
+        screenshotItems.forEach((_, index) => {
+            const button = document.createElement('button');
+            button.className = 'marquee-btn';
+            button.dataset.index = index;
+            if (index === 0) button.classList.add('active');
+            button.addEventListener('click', () => {
+                goToMarqueeSlide(index);
             });
+            marqueeControls.appendChild(button);
         });
 
-        // Interactive Tabs
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const tabId = this.getAttribute('data-tab');
-                const interactiveTabId = 'interactive-' + tabId;
-                
-                // Remove active class from all tab buttons
-                tabBtns.forEach(tab => {
-                    tab.classList.remove('active');
-                });
-                
-                // Remove active class from all interactive screens
-                document.querySelectorAll('.app-screen').forEach(screen => {
-                    screen.classList.remove('active');
-                });
-                
-                // Remove active class from all interactive nav items
-                document.querySelectorAll('.app-nav-item').forEach(nav => {
-                    nav.classList.remove('active');
-                });
-                
-                // Add active class to clicked tab button
-                this.classList.add('active');
-                
-                // Activate corresponding interactive screen
-                document.getElementById(interactiveTabId).classList.add('active');
-                
-                // Activate corresponding interactive nav item
-                document.querySelector(`.app-nav-item[data-tab="${interactiveTabId}"]`).classList.add('active');
-            });
-        });
+        const marqueeButtons = document.querySelectorAll('.marquee-btn');
 
-        // Community Ranking Tabs
-        const rankingTabs = document.querySelectorAll('.ranking-tab');
-        rankingTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                // Remove active class from all ranking tabs
-                rankingTabs.forEach(t => {
-                    t.classList.remove('active');
-                });
-                
-                // Add active class to clicked tab
-                this.classList.add('active');
-                
-                // In a real app, you would fetch and display different ranking data here
+        function goToMarqueeSlide(index) {
+            currentMarqueeIndex = index;
+            const translateX = -(index * 33.333); // Each slide is 33.333% width
+            screenshotMarquee.style.transform = `translateX(${translateX}%)`;
+            
+            // Update active button
+            marqueeButtons.forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
             });
+            
+            // Reset auto-rotation timer
+            resetMarqueeInterval();
+        }
+
+        function nextMarqueeSlide() {
+            currentMarqueeIndex = (currentMarqueeIndex + 1) % screenshotItems.length;
+            goToMarqueeSlide(currentMarqueeIndex);
+        }
+
+        function startMarqueeInterval() {
+            marqueeInterval = setInterval(nextMarqueeSlide, 3000); // Change slide every 3 seconds
+        }
+
+        function resetMarqueeInterval() {
+            clearInterval(marqueeInterval);
+            startMarqueeInterval();
+        }
+
+        // Start the auto-rotation
+        startMarqueeInterval();
+
+        // Pause on hover
+        const phoneMarqueeContainer = document.querySelector('.phone-marquee-container');
+        phoneMarqueeContainer.addEventListener('mouseenter', () => {
+            clearInterval(marqueeInterval);
+        });
+        
+        phoneMarqueeContainer.addEventListener('mouseleave', () => {
+            startMarqueeInterval();
         });
 
         // Header scroll effect
@@ -1875,8 +1676,10 @@
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
                 header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                header.style.padding = '10px 0';
             } else {
                 header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+                header.style.padding = '15px 0';
             }
         });
 
@@ -1917,37 +1720,9 @@
         }, observerOptions);
 
         // Observe elements to animate
-        document.querySelectorAll('.feature-card, .benefit-item, .testimonial-card').forEach(el => {
+        document.querySelectorAll('.feature-card, .testimonial-card, .screenshot-content').forEach(el => {
             observer.observe(el);
-        });
-
-        // Update time in phone mockups
-        function updateTime() {
-            const now = new Date();
-            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-            document.querySelectorAll('.app-time').forEach(timeEl => {
-                timeEl.textContent = timeString;
-            });
-        }
-
-        // Update time initially and then every minute
-        updateTime();
-        setInterval(updateTime, 60000);
-
-        // Fix for direct APK link - ensure it's clickable
-        document.getElementById('direct-apk-link').addEventListener('click', function(e) {
-            // Allow the default behavior - the link should work normally
-            console.log('Direct APK link clicked');
-        });
-
-        document.getElementById('download-apk-link').addEventListener('click', function(e) {
-            // Allow the default behavior - the link should work normally
-            console.log('Download APK link clicked');
         });
     </script>
 </body>
 </html>
-
-
-
-
