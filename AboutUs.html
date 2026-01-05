@@ -3,696 +3,860 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About SiratSync - Your Spiritual Companion</title>
+    <title>About SiratSync - Your Islamic Lifestyle App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --emerald: #0d9488;
-            --teal: #14b8a6;
-            --soft-gold: #eab308;
-            --light-gold: #fef9c3;
-            --dark-green: #0f766e;
-            --light-bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text-dark: #1e293b;
-            --text-light: #64748b;
-            --accent-glow: rgba(234, 179, 8, 0.1);
-            --border-radius: 12px;
-            --shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-            --shadow-hover: 0 15px 35px rgba(13, 148, 136, 0.12);
+            --emerald: #009688;
+            --gold: #FFD700;
+            --white: #FFFFFF;
+            --black: #333333;
+            --light-gray: #f8f8f8;
+            --dark-emerald: #00796B;
+            --light-emerald: rgba(0, 150, 136, 0.1);
+            --text-gray: #666;
+            --dark-bg: #0a3d3a;
+            --gradient-emerald: linear-gradient(135deg, var(--emerald) 0%, #00b894 100%);
+            --gradient-gold: linear-gradient(135deg, var(--gold) 0%, #ffeb3b 100%);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-        
-        body {
             font-family: 'Poppins', sans-serif;
-            color: var(--text-dark);
-            background-color: var(--light-bg);
-            line-height: 1.7;
+        }
+
+        body {
+            color: var(--black);
+            line-height: 1.6;
+            background-color: var(--white);
             overflow-x: hidden;
         }
-        
+
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         /* Header */
         header {
-            background: linear-gradient(135deg, var(--dark-green) 0%, var(--emerald) 100%);
-            color: white;
-            padding: 4rem 0 3rem;
+            background: var(--gradient-emerald);
+            color: var(--white);
+            padding: 100px 0 40px;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
-        
-        .header-pattern {
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.1;
+        }
+
+        .logo-large {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Main Content */
+        main {
+            padding: 50px 0;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--emerald);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-gray);
+            font-size: 16px;
+        }
+
+        /* App Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .feature-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            text-align: left;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-card::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            opacity: 0.1;
-            background-image: 
-                radial-gradient(circle at 20% 30%, var(--soft-gold) 2px, transparent 3px),
-                radial-gradient(circle at 80% 70%, var(--soft-gold) 2px, transparent 3px);
-            background-size: 60px 60px;
+            height: 4px;
+            background: var(--gradient-emerald);
         }
-        
-        .header-content {
-            position: relative;
-            z-index: 2;
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-        
-        .app-icon-large {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: var(--soft-gold);
-            animation: gentlePulse 3s infinite ease-in-out;
+
+        .feature-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--light-emerald);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: var(--emerald);
         }
-        
-        @keyframes gentlePulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--emerald);
         }
-        
-        h1 {
-            font-family: 'Amiri', serif;
-            font-size: 3.2rem;
-            margin-bottom: 0.8rem;
-            font-weight: 700;
+
+        .feature-card p {
+            font-size: 15px;
+            color: var(--text-gray);
+            line-height: 1.5;
         }
-        
-        .tagline {
-            font-size: 1.4rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto;
-            font-weight: 300;
-        }
-        
-        .arabic-calligraphy {
-            font-family: 'Scheherazade New', serif;
-            font-size: 1.8rem;
-            margin: 2rem 0 1rem;
-            color: var(--light-gold);
-        }
-        
-        /* Main Content */
-        main {
-            padding: 4rem 0;
-        }
-        
-        .section {
-            margin-bottom: 5rem;
-            position: relative;
-        }
-        
-        .section-title {
-            font-family: 'Amiri', serif;
-            font-size: 2.2rem;
-            color: var(--dark-green);
-            margin-bottom: 2rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 3px solid var(--light-gold);
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--soft-gold);
-        }
-        
-        .content-card {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius);
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            margin-bottom: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        /* Developer Section - IMPROVED */
+        .developer-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
             position: relative;
             overflow: hidden;
         }
-        
-        .content-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-        
-        .content-card::before {
+
+        .developer-section::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--emerald), var(--soft-gold));
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: var(--gradient-emerald);
+            border-radius: 0 0 0 100px;
+            opacity: 0.1;
         }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .feature-card {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius);
-            padding: 1.8rem;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-            border: 1px solid #f1f5f9;
-            text-align: center;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--teal);
-        }
-        
-        .feature-icon {
-            font-size: 2.2rem;
-            color: var(--emerald);
-            margin-bottom: 1.2rem;
-            display: inline-block;
-            width: 70px;
-            height: 70px;
-            line-height: 70px;
-            background-color: var(--light-gold);
-            border-radius: 50%;
-        }
-        
-        .feature-title {
-            font-family: 'Amiri', serif;
-            font-size: 1.4rem;
-            color: var(--dark-green);
-            margin-bottom: 0.8rem;
-        }
-        
-        /* Developer Story */
-        .developer-section {
-            background: linear-gradient(135deg, #f0f9ff 0%, #fefce8 100%);
-            padding: 3rem;
-            border-radius: var(--border-radius);
-            margin: 3rem 0;
-            border: 1px solid #e0f2fe;
-            position: relative;
-        }
-        
+
         .developer-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
         }
-        
-        .developer-avatar {
-            width: 100px;
-            height: 100px;
+
+        .developer-header h2 {
+            font-size: 32px;
+            color: var(--emerald);
+            margin-bottom: 10px;
+        }
+
+        .developer-header p {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .developer-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .developer-image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .developer-image-wrapper {
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--emerald), var(--teal));
+            background: var(--gradient-emerald);
+            padding: 5px;
+            position: relative;
+            box-shadow: 0 15px 30px rgba(0, 150, 136, 0.2);
+        }
+
+        .developer-avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+        }
+
+        .developer-badge {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 2.5rem;
-            margin-right: 1.5rem;
-            border: 4px solid var(--soft-gold);
+            color: var(--black);
+            font-size: 24px;
+            border: 3px solid white;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
         }
-        
+
+        .developer-info {
+            padding: 20px;
+        }
+
         .developer-name {
-            font-family: 'Amiri', serif;
-            font-size: 1.8rem;
-            color: var(--dark-green);
+            font-size: 28px;
+            color: var(--emerald);
+            margin-bottom: 5px;
+            font-weight: 600;
         }
-        
+
         .developer-title {
-            color: var(--text-light);
-            font-size: 1rem;
-            margin-top: 0.3rem;
+            font-size: 18px;
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-weight: 500;
         }
-        
-        .highlight-box {
-            background-color: var(--light-gold);
-            border-left: 4px solid var(--soft-gold);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+
+        .developer-description {
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            line-height: 1.6;
         }
-        
-        /* Authentication & Privacy */
-        .trust-badge {
+
+        .developer-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .skill-tag {
+            background: rgba(0, 150, 136, 0.1);
+            color: var(--emerald);
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid rgba(0, 150, 136, 0.2);
+        }
+
+        .developer-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .contact-btn {
             display: inline-flex;
             align-items: center;
-            background-color: #dcfce7;
-            color: #166534;
-            padding: 0.6rem 1.2rem;
+            gap: 8px;
+            padding: 12px 25px;
             border-radius: 50px;
-            margin: 0.5rem 0.5rem 0.5rem 0;
-            font-size: 0.9rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 15px;
         }
-        
-        .trust-badge i {
-            margin-right: 0.5rem;
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2);
         }
-        
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .email-btn {
+            background: var(--gradient-emerald);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 150, 136, 0.2);
+        }
+
+        .email-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 150, 136, 0.3);
+        }
+
+        .github-btn {
+            background: #333;
+            color: white;
+            box-shadow: 0 5px 15px rgba(51, 51, 51, 0.2);
+        }
+
+        .github-btn:hover {
+            background: #24292e;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(36, 41, 46, 0.3);
+        }
+
+        /* Mission Section */
+        .mission-section {
+            background: var(--gradient-emerald);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .mission-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+
+        /* Values Grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .value-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .value-icon {
+            font-size: 36px;
+            color: var(--emerald);
+            margin-bottom: 15px;
+        }
+
         /* Footer */
         footer {
-            background-color: var(--dark-green);
-            color: white;
-            padding: 3rem 0 2rem;
-            text-align: center;
+            background-color: var(--dark-bg);
+            color: var(--white);
+            padding: 50px 0 20px;
+            margin-top: 50px;
         }
-        
-        .dua-section {
-            background: linear-gradient(135deg, rgba(234, 179, 8, 0.15) 0%, rgba(20, 184, 166, 0.15) 100%);
-            padding: 2.5rem;
-            border-radius: var(--border-radius);
-            margin-bottom: 2rem;
-            border: 1px solid rgba(234, 179, 8, 0.3);
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
         }
-        
-        .dua-text {
-            font-family: 'Amiri', serif;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark-green);
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--gold);
         }
-        
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 15px;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
         .social-links {
             display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
+            gap: 12px;
+            margin-top: 20px;
         }
-        
-        .social-link {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
+
+        .social-links a {
+            width: 42px;
+            height: 42px;
             background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--white);
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
+            font-size: 18px;
         }
-        
-        .social-link:hover {
-            background-color: var(--soft-gold);
-            color: var(--dark-green);
-            transform: translateY(-3px);
+
+        .social-links a:hover {
+            background-color: var(--emerald);
+            transform: translateY(-5px);
         }
-        
-        .copyright {
-            opacity: 0.8;
-            font-size: 0.9rem;
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
+
+        .social-whatsapp:hover {
+            background-color: #25D366 !important;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 14px;
         }
-        
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 16px;
+        }
+
         /* Responsive Design */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .tagline {
-                font-size: 1.2rem;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .content-card {
-                padding: 1.8rem;
-            }
-            
-            .developer-header {
-                flex-direction: column;
+        @media (max-width: 992px) {
+            .developer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
                 text-align: center;
             }
             
-            .developer-avatar {
-                margin-right: 0;
-                margin-bottom: 1rem;
+            .developer-image-wrapper {
+                width: 180px;
+                height: 180px;
             }
             
-            .feature-grid {
-                grid-template-columns: 1fr;
+            .developer-info {
+                padding: 10px;
             }
             
-            .arabic-calligraphy {
-                font-size: 1.5rem;
+            .developer-skills {
+                justify-content: center;
             }
         }
-        
-        @media (max-width: 480px) {
+
+        @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 28px;
             }
             
-            .section-title {
-                font-size: 1.6rem;
+            .section-title h2 {
+                font-size: 26px;
             }
             
             .developer-section {
-                padding: 1.8rem;
+                padding: 30px 20px;
             }
             
-            .dua-section {
-                padding: 1.8rem;
+            .mission-section {
+                padding: 30px 20px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .developer-contact {
+                justify-content: center;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
         }
-        
-        /* Decorative Elements */
-        .islamic-pattern {
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            opacity: 0.03;
-            z-index: 0;
-            pointer-events: none;
-        }
-        
-        .pattern-1 {
-            top: 10%;
-            right: 5%;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,10 C65,10 80,20 80,35 C80,50 65,60 50,60 C35,60 20,50 20,35 C20,20 35,10 50,10 Z" fill="%230d9488"/><circle cx="50" cy="35" r="8" fill="%23eab308"/></svg>');
-        }
-        
-        .pattern-2 {
-            bottom: 15%;
-            left: 5%;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="50,10 80,50 50,90 20,50" fill="%230d9488"/><circle cx="50" cy="50" r="15" fill="%23eab308"/></svg>');
+
+        @media (max-width: 576px) {
+            .logo-large {
+                font-size: 32px;
+            }
+            
+            .section-title h2 {
+                font-size: 22px;
+            }
+            
+            .feature-card {
+                padding: 20px;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .developer-image-wrapper {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .developer-badge {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            
+            .contact-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="header-pattern"></div>
-        <div class="container header-content">
-            <div class="app-icon-large">
-                <i class="fas fa-star-and-crescent"></i>
+        <div class="container">
+            <div class="logo-large">
+                <i class="fas fa-mosque"></i>
             </div>
             <h1>About SiratSync</h1>
-            <p class="tagline">A Modern Islamic Lifestyle App for Spiritual Connection & Growth</p>
-            <div class="arabic-calligraphy">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
-            <p>Your Companion on the Straight Path</p>
+            <p class="tagline">Your Complete Islamic Lifestyle Companion - Quran, Prayer Times, Duas, Hadith & Habit Tracker</p>
         </div>
     </header>
-    
+
     <!-- Main Content -->
     <main class="container">
-        <!-- Islamic Pattern Decorations -->
-        <div class="islamic-pattern pattern-1"></div>
-        <div class="islamic-pattern pattern-2"></div>
-        
-        <!-- Our Mission -->
+        <!-- App Overview -->
         <section class="section">
-            <h2 class="section-title">Our Mission</h2>
-            <div class="content-card">
-                <p>SiratSync is built with a single, heartfelt mission: <strong>to help Muslims strengthen their connection with Allah through daily technology that inspires, reminds, and facilitates spiritual growth.</strong></p>
-                
-                <p>In today's fast-paced digital world, we believe technology should serve our deen, not distract from it. SiratSync is designed to be a digital companion that brings you closer to the Qur'an, makes your worship more meaningful, and helps you build consistent Islamic habits that bring peace and barakah to your life.</p>
-                
-                <p>We aim to create a holistic Islamic lifestyle experience that supports you from Fajr to Isha, transforming your smartphone from a potential distraction into a tool for spiritual elevation and connection with your faith.</p>
+            <div class="section-title">
+                <h2>What is SiratSync?</h2>
+                <p>A comprehensive Islamic app designed to help Muslims stay connected with their faith through technology</p>
             </div>
-        </section>
-        
-        <!-- Why SiratSync Was Created -->
-        <section class="section">
-            <h2 class="section-title">Why SiratSync Was Created</h2>
-            <div class="content-card">
-                <p>The journey of SiratSync began with a simple observation: while there are countless apps for productivity, entertainment, and social connection, there were very few comprehensive, beautifully designed Islamic apps that truly understood the needs of modern Muslims.</p>
-                
-                <p>Most existing solutions felt outdated, fragmented, or lacked the thoughtful design that makes daily use a pleasure rather than a chore. We envisioned something different—an app that would:</p>
-                
-                <ul style="margin-left: 1.5rem; margin-top: 1rem;">
-                    <li style="margin-bottom: 0.8rem;">Make the Qur'an accessible and beautiful to read daily</li>
-                    <li style="margin-bottom: 0.8rem;">Ensure Muslims never miss a prayer with gentle, reliable reminders</li>
-                    <li style="margin-bottom: 0.8rem;">Help build and track meaningful Islamic habits</li>
-                    <li style="margin-bottom: 0.8rem;">Provide authentic Islamic content in a modern, user-friendly format</li>
-                    <li style="margin-bottom: 0.8rem;">Create a sense of spiritual community without compromising privacy</li>
-                </ul>
-                
-                <p>SiratSync was born from this vision—to create a spiritual toolkit that feels both ancient in its wisdom and contemporary in its execution, serving as a bridge between timeless faith and modern life.</p>
-            </div>
-        </section>
-        
-        <!-- What Makes SiratSync Unique -->
-        <section class="section">
-            <h2 class="section-title">What Makes SiratSync Unique</h2>
-            <div class="content-card">
-                <p>While there are many Islamic apps available, SiratSync stands apart through its thoughtful integration of features, commitment to authenticity, and focus on user experience:</p>
-                
-                <div class="highlight-box">
-                    <p><i class="fas fa-heart" style="color: var(--soft-gold); margin-right: 0.5rem;"></i> <strong>Holistic Approach:</strong> Unlike apps that focus on just one aspect of Islamic practice, SiratSync brings together Qur'an, prayer, dhikr, hadith, duas, and habit tracking in one seamless experience.</p>
-                </div>
-                
-                <div class="highlight-box">
-                    <p><i class="fas fa-palette" style="color: var(--soft-gold); margin-right: 0.5rem;"></i> <strong>Thoughtful Design:</strong> Every interface, animation, and interaction is designed with spiritual intentionality—calming colors, elegant typography, and intuitive navigation that enhances rather than distracts from your worship.</p>
-                </div>
-                
-                <div class="highlight-box">
-                    <p><i class="fas fa-user-shield" style="color: var(--soft-gold); margin-right: 0.5rem;"></i> <strong>Privacy-First:</strong> We believe your spiritual journey is personal. SiratSync collects minimal data, doesn't show ads, and never sells user information. Your trust is our most valued asset.</p>
-                </div>
-                
-                <div class="highlight-box">
-                    <p><i class="fas fa-graduation-cap" style="color: var(--soft-gold); margin-right: 0.5rem;"></i> <strong>Authenticity & Accuracy:</strong> All Islamic content is sourced from reputable, verified references. We work with Islamic scholars to ensure translations, prayer times, and religious content meet high standards of authenticity.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Core Features -->
-        <section class="section">
-            <h2 class="section-title">Core Features</h2>
-            <p style="margin-bottom: 2rem; color: var(--text-light);">SiratSync brings together everything you need for daily spiritual practice in one beautifully integrated experience:</p>
             
-            <div class="feature-grid">
+            <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-quran"></i>
+                        <i class="fas fa-book-quran"></i>
                     </div>
-                    <h3 class="feature-title">Qur'an Mushaf</h3>
-                    <p>Complete Qur'an with Uthmani & Indo-Pak scripts, translations, bookmarks, and reading progress tracking.</p>
+                    <h3>Complete Quran</h3>
+                    <p>Read Quran with beautiful Arabic script, English translation, and adjustable settings. Bookmark ayahs and track your reading progress.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-mosque"></i>
                     </div>
-                    <h3 class="feature-title">Prayer Times</h3>
-                    <p>Accurate prayer times with multiple calculation methods, Qibla direction, and mosque finder.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bell"></i>
-                    </div>
-                    <h3 class="feature-title">Adhan Notifications</h3>
-                    <p>Reliable prayer reminders with beautiful Adhan options and customizable alert times.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-hands-praying"></i>
-                    </div>
-                    <h3 class="feature-title">Duas Collection</h3>
-                    <p>Comprehensive collection of authentic duas for daily life occasions with transliteration and translation.</p>
+                    <h3>Accurate Prayer Times</h3>
+                    <p>Never miss a prayer with auto-calculated prayer times based on your location, Qibla direction, and customizable reminders.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-book-open"></i>
                     </div>
-                    <h3 class="feature-title">Hadith Library</h3>
-                    <p>Curated collection of authentic hadith with search, favorites, and daily hadith feature.</p>
+                    <h3>Authentic Hadith</h3>
+                    <p>Access authentic Hadith collections from Sahih Bukhari and Sahih Muslim with easy browsing and search functionality.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-circle-nodes"></i>
+                        <i class="fas fa-hands-praying"></i>
                     </div>
-                    <h3 class="feature-title">Digital Tasbih</h3>
-                    <p>Beautiful digital tasbih counter with multiple dhikr options and progress tracking.</p>
+                    <h3>Duas Collection</h3>
+                    <p>Comprehensive collection of authentic duas from Quran and Sunnah for all occasions, with Arabic text and translations.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="feature-title">Habit Tracker</h3>
-                    <p>Build and track Islamic habits with motivational streaks, goals, and progress visualization.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="feature-title">Community</h3>
-                    <p>Share encouragement, join group challenges, and connect with other Muslims on their spiritual journeys.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-wifi-slash"></i>
-                    </div>
-                    <h3 class="feature-title">Offline Mode</h3>
-                    <p>Access Qur'an, prayers, and essential features without an internet connection.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3 class="feature-title">Theme Customization</h3>
-                    <p>Choose from light, dark, or sepia themes with adjustable fonts for comfortable reading.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3 class="feature-title">Multilingual Support</h3>
-                    <p>Available in English, Urdu, Hindi,,Malay and Arabic with more languages coming soon.</p>
+                    <h3>Habit Tracker</h3>
+                    <p>Build and track your Islamic habits like Salah, Quran reading, fasting, and dhikr with streak tracking and progress monitoring.</p>
                 </div>
             </div>
         </section>
-        
-        <!-- Developer Story -->
+
+        <!-- Our Mission -->
+        <section class="mission-section">
+            <h2>Our Mission</h2>
+            <p style="font-size: 17px; max-width: 800px; margin: 0 auto;">
+                To create technology that serves the Ummah by making Islamic practices easier, 
+                more accessible, and integrated into daily life. We believe in using modern 
+                technology to strengthen our connection with Allah.
+            </p>
+        </section>
+
+    <!-- Developer Section -->
+<section class="developer-section">
+    <div class="developer-header">
+        <h2>Meet the Developer</h2>
+        <p>The mind and mission behind SiratSync</p>
+    </div>
+
+    <div class="developer-container">
+        <div class="developer-image-container">
+            <div class="developer-image-wrapper">
+                <img 
+                    src="kaiser.jpg" 
+                    alt="Kaiser Mohiuddin – Developer of SiratSync" 
+                    class="developer-avatar"
+                    onerror="this.src=''">
+            </div>
+            <div class="developer-badge">
+                <i class="fas fa-code"></i>
+            </div>
+        </div>
+
+        <div class="developer-info">
+            <h3 class="developer-name">Kaiser Mohiuddin</h3>
+            <p class="developer-title">
+                Computer Science Student • Full-Stack & Android Developer
+            </p>
+<p class="developer-description">
+    SiratSync was built as a passion-driven initiative to bridge modern technology with Islamic values. 
+    As a Muslim developer, I identified the need for a reliable and thoughtfully designed Islamic app 
+    that supports consistency in faith while fitting naturally into today’s digital lifestyle.
+</p>
+
+<p class="developer-description">
+    With a background in computer science and a strong interest in building practical, user-focused 
+    applications, I aimed to create a platform that combines authenticity, simplicity, and usability. 
+    Many existing Islamic apps either lack consistency, modern design, or long-term maintenance. 
+    SiratSync was developed to address these gaps by offering essential Islamic features in a single, 
+    clean, and dependable application.
+</p>
+
+<p class="developer-description">
+    The project began as a personal learning journey and gradually evolved through continuous improvement, 
+    real-world usage, and user feedback. Every feature in SiratSync is designed with intention—focused on 
+    helping users build sustainable habits, stay connected to their faith, and benefit from technology 
+    without distraction.
+</p>
+
+<p class="developer-description">
+    My long-term goal is to continue improving SiratSync as a service to the Ummah by maintaining quality, 
+    transparency, and ethical development practices, while learning and growing as a developer through 
+    meaningful, purpose-driven projects.
+</p>
+
+
+            <div class="developer-skills">
+                <span class="skill-tag">Android Development</span>
+                <span class="skill-tag">Full-Stack Development</span>
+                <span class="skill-tag">AI & Machine Learning</span>
+            </div>
+
+            <div class="developer-contact">
+                <a 
+                    href="https://wa.me/919541871382?text=Assalamualaikum%2C%20I%20have%20a%20question%20about%20SiratSync"
+                    class="contact-btn whatsapp-btn"
+                    target="_blank"
+                >
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+
+                <a 
+                    href="mailto:siratsync@gmail.com"
+                    class="contact-btn email-btn"
+                >
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+
+                <a 
+                    href="https://github.com/Lonekaiser04"
+                    class="contact-btn github-btn"
+                    target="_blank"
+                >
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Our Values -->
         <section class="section">
-            <h2 class="section-title">The Story Behind SiratSync</h2>
-            <div class="developer-section">
-                <div class="developer-header">
-                    <div class="developer-avatar">
-                        <i class="fas fa-code"></i>
+            <div class="section-title">
+                <h2>Our Values</h2>
+                <p>The principles that guide everything we do at SiratSync</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-star-and-crescent"></i>
                     </div>
-                    <div>
-                        <h3 class="developer-name">Kaiser Mohiuddin</h3>
-                        <p class="developer-title">Creator & Developer of SiratSync</p>
-                        <p>Computer Science Engineering Student</p>
-                    </div>
+                    <h3>Authenticity</h3>
+                    <p>All Islamic content is sourced from verified, authentic references to ensure accuracy.</p>
                 </div>
                 
-                <p>SiratSync began as a personal dream—a student's aspiration to bridge two worlds: the timeless wisdom of Islamic tradition and the innovative potential of modern technology.</p>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Sincerity</h3>
+                    <p>Created with pure intention (niyyah) to serve the Muslim community.</p>
+                </div>
                 
-                <p>As a Computer Science engineering student passionate about both coding and Islamic knowledge, I noticed a gap in the digital landscape. While there were countless apps for entertainment and productivity, few offered the comprehensive, beautifully designed spiritual toolkit that I envisioned for myself and the Ummah.</p>
-                
-                <p>The journey started with a simple question: <strong>"What if my smartphone could be transformed from a distraction into a means of getting closer to Allah?"</strong></p>
-                
-                <p>With this vision, I began developing SiratSync—not as just another app, but as a labor of love, combining sincere intention (niyyah), meticulous research, and countless hours of coding into a spiritual companion that I hoped would benefit Muslims worldwide.</p>
-                
-                <p>Every feature in SiratSync has been thoughtfully crafted with the user's spiritual journey in mind. The Qur'an reader was designed for reverence and focus. The prayer tracker was built to encourage consistency without judgment. The habit tracker was created to celebrate small steps of progress on the path to Allah.</p>
-                
-                <p>My goal is simple yet profound: <strong>to serve the Ummah through high-quality Islamic technology</strong> that makes practicing our deen easier, more meaningful, and integrated into our daily digital lives.</p>
-                
-                <p>SiratSync continues to evolve through continuous learning, user feedback, and dedicated improvement. This is not merely an app development project—it's a spiritual commitment to creating technology that serves our higher purpose and brings us closer to our Creator.</p>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Privacy</h3>
+                    <p>We respect your privacy - no ads, no data selling. Your spiritual journey is personal.</p>
+                </div>
             </div>
         </section>
-        
-        <!-- Authenticity & Privacy -->
-        <section class="section">
-            <h2 class="section-title">Our Commitment to Authenticity & Privacy</h2>
-            <div class="content-card">
-                <p>We understand that when it comes to matters of faith, trust is paramount. That's why we've built SiratSync on two foundational pillars:</p>
-                
-                <h3 style="color: var(--dark-green); margin: 1.5rem 0 1rem;">Authenticity First</h3>
-                <p>All Islamic content in SiratSync is sourced from reputable, verified references:</p>
-                <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
-                    <li style="margin-bottom: 0.5rem;"><strong>Qur'an:</strong> Using the widely recognized Madinah Mushaf with verification from multiple authoritative sources</li>
-                    <li style="margin-bottom: 0.5rem;"><strong>Hadith:</strong> Sourced primarily from Sahih Bukhari and Sahih Muslim with clear grading indicators</li>
-                    <li style="margin-bottom: 0.5rem;"><strong>Duas:</strong> Collected from authentic books of supplication with proper references</li>
-                    <li style="margin-bottom: 0.5rem;"><strong>Prayer Times:</strong> Calculated using established methods with options for different madhahib</li>
-                </ul>
-                
-                <div style="margin: 2rem 0;">
-                    <span class="trust-badge"><i class="fas fa-book"></i> Verified Sources</span>
-                    <span class="trust-badge"><i class="fas fa-translate"></i> Accurate Translation</span>
-                    <span class="trust-badge"><i class="fas fa-user-check"></i> Continuous Verification</span>
-                </div>
-                
-                <h3 style="color: var(--dark-green); margin: 1.5rem 0 1rem;">Your Privacy is Sacred</h3>
-                <p>We believe your spiritual journey is personal and private. SiratSync is designed with a privacy-first approach:</p>
-                <ul style="margin-left: 1.5rem;">
-                    <li style="margin-bottom: 0.5rem;"><strong>Minimal Data Collection:</strong> We only collect what's absolutely necessary for app functionality</li>
-                    <li style="margin-bottom: 0.5rem;"><strong>No Selling of Data:</strong> We will never sell or share your personal information with third parties</li>
-                    <li style="margin-bottom: 0.5rem;"><strong>Local Storage:</strong> Most of your data (bookmarks, prayer logs, etc.) stays on your device</li>
-                    <li style="margin-bottom: 0.5rem;"><strong>Transparent Permissions:</strong> We clearly explain why each permission is needed and allow you to opt out</li>
-                    <li style="margin-bottom: 0.5rem;"><strong>Ad-Free Experience:</strong> SiratSync is completely free of advertisements and tracking</li>
-                </ul>
-                
-                <p style="margin-top: 1.5rem; font-style: italic;">"Your trust is our amanah (trust from Allah). We strive to honor that trust in every line of code and every design decision."</p>
+
+        <!-- Call to Action -->
+        <section class="section" style="text-align: center;">
+            <div class="section-title">
+                <h2>Join Our Community</h2>
+                <p>Download SiratSync and start your spiritual journey today</p>
             </div>
-        </section>
-        
-        <!-- Closing Message -->
-        <section class="section">
-            <div class="dua-section">
-                <h2 class="section-title" style="border: none; padding: 0; margin-bottom: 1.5rem;">A Humble Request</h2>
-                <p class="dua-text">May Allah accept this effort and make SiratSync a means of benefit for the Ummah.</p>
-                <p>SiratSync has been created with sincere intention and dedicated effort, but we recognize that perfection belongs only to Allah. We continuously strive to improve and welcome your feedback, suggestions, and especially your <strong>duas</strong>.</p>
-                <p>If SiratSync has been beneficial to you in any way, please remember the developer and all those who contributed to this project in your prayers. May Allah accept our efforts, forgive our shortcomings, and make this app a source of guidance and barakah for all who use it.</p>
-                
-                <div style="margin-top: 2rem; padding: 1.5rem; background-color: rgba(255, 255, 255, 0.7); border-radius: var(--border-radius);">
-                    <p style="color: var(--dark-green); font-weight: 500; margin-bottom: 0.5rem;">رَبَّنَا تَقَبَّلْ مِنَّا ۖ إِنَّكَ أَنتَ السَّمِيعُ الْعَلِيمُ</p>
-                    <p>"Our Lord, accept [this] from us. Indeed, You are the Hearing, the Knowing." (Qur'an 2:127)</p>
-                </div>
+            
+            <div class="cta-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.islamic.streakly" 
+                   class="download-btn" style="background: var(--gradient-gold); color: var(--black);">
+                    <i class="fab fa-google-play"></i> Play Store
+                </a>
             </div>
         </section>
     </main>
-    
+
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="app-icon-large" style="font-size: 2.5rem; margin-bottom: 1rem;">
-                <i class="fas fa-star-and-crescent"></i>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SiratSync</h3>
+                    <p>Your all-in-one Islamic companion for spiritual growth and consistent worship. Built with simplicity and authenticity.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/__kaiserlone34?igsh=Y2JqeWowYXU3OWdr" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/919541871382" target="_blank" class="social-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://github.com/Lonekaiser04" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:Siratsync@gmail.com">Email Support</a></li>
+                        <li><a href="FAQs.html">FAQ</a></li>
+                        <li><a href="delete.html">Delete Account</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
             </div>
-            <h3 style="font-family: 'Amiri', serif; font-size: 1.8rem; margin-bottom: 1rem;">SiratSync</h3>
-            <p>Your Companion on the Straight Path</p>
             
-            <div class="social-links">
-                <a href="https://www.instagram.com/__kaiserlone34?igsh=Y2JqeWowYXU3OWdr" class="social-link">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://github.com/Lonekaiser04" class="social-link">
-                    <i class="fab fa-github"></i>
-                </a>
+            <div class="footer-bottom">
+                <p>Copyright © 2025 SiratSync. All rights reserved. | Created with ❤️ for the Ummah</p>
+                <p style="margin-top: 10px; font-style: italic;">
+                    "Our Lord, accept [this] from us. Indeed, You are the Hearing, the Knowing." (Qur'an 2:127)
+                </p>
             </div>
-            
-            <p class="copyright">
-                © 2023 SiratSync. All rights reserved.<br>
-                Created with ❤️ for the Ummah | "Seeking Allah's Pleasure Through Technology"
-            </p>
         </div>
     </footer>
 
     <script>
+        // Simple animation for cards on scroll
         document.addEventListener('DOMContentLoaded', function() {
-            // Add subtle scroll animations to content cards
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             };
-            
+
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -701,43 +865,39 @@
                     }
                 });
             }, observerOptions);
-            
-            // Animate content cards on scroll
-            const contentCards = document.querySelectorAll('.content-card, .feature-card');
-            contentCards.forEach(card => {
+
+            // Animate feature cards
+            const featureCards = document.querySelectorAll('.feature-card, .value-card');
+            featureCards.forEach(card => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
                 card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
                 observer.observe(card);
             });
-            
-            // Animate section titles
-            const sectionTitles = document.querySelectorAll('.section-title');
-            sectionTitles.forEach(title => {
-                title.style.opacity = '0';
-                title.style.transform = 'translateX(-20px)';
-                title.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(title);
+
+            // Animate developer section
+            const developerSection = document.querySelector('.developer-section');
+            developerSection.style.opacity = '0';
+            developerSection.style.transform = 'translateY(20px)';
+            developerSection.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(developerSection);
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
-            
-            // Trigger initial animation for elements already in view
-            setTimeout(() => {
-                contentCards.forEach(card => {
-                    const rect = card.getBoundingClientRect();
-                    if (rect.top < window.innerHeight - 50) {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }
-                });
-                
-                sectionTitles.forEach(title => {
-                    const rect = title.getBoundingClientRect();
-                    if (rect.top < window.innerHeight - 50) {
-                        title.style.opacity = '1';
-                        title.style.transform = 'translateX(0)';
-                    }
-                });
-            }, 100);
         });
     </script>
 </body>
