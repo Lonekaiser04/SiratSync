@@ -106,10 +106,55 @@
             color: var(--emerald);
             text-decoration: none;
         }
+        /* Add to your CSS */
+.app-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    object-fit: contain;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        .logo i {
-            color: var(--gold);
-        }
+/* Update the logo gap */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Slightly larger gap for icon */
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--emerald);
+    text-decoration: none;
+}
+
+/* Remove the mosque icon style since we're using app icon */
+.logo i {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .app-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .logo {
+        font-size: 22px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .logo {
+        font-size: 20px;
+        gap: 8px;
+    }
+}
 
         .nav-links {
             display: flex;
@@ -617,8 +662,60 @@
             flex-direction: column;
             gap: 20px;
         }
+/* Google Play Store Button Styles - For Image Button */
+.play-store-button {
+    display: flex;
+    justify-content: center;
+}
 
-    /* QR Code Styles - Add this to your CSS */
+.play-store-link {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: none;
+    overflow: hidden; /* Ensures image doesn't overflow rounded corners */
+}
+
+.play-store-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.play-store-icon {
+    width: 220px; /* Adjust based on your image aspect ratio */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-store-icon img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.play-store-link:hover .play-store-icon img {
+    transform: scale(1.05);
+}
+
+/* Download Options Layout */
+.download-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* QR Code Styles */
 .qr-code {
     width: 180px;
     height: 180px;
@@ -633,7 +730,7 @@
     padding: 15px;
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    overflow: hidden; /* Prevent image from overflowing */
+    overflow: hidden;
 }
 
 .qr-code-container {
@@ -642,14 +739,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Contain the image */
+    overflow: hidden;
     margin-bottom: 10px;
 }
 
 .qr-code-image {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensure image fits without distortion */
+    object-fit: contain;
     display: block;
 }
 
@@ -660,12 +757,20 @@
     margin-top: 5px;
 }
 
-/* Responsive adjustments for QR code */
+/* Responsive adjustments */
 @media (max-width: 768px) {
+    .download-options {
+        gap: 40px;
+        flex-direction: column;
+    }
+    
+    .play-store-icon {
+        width: 200px;
+    }
+    
     .qr-code {
         width: 160px;
         height: 160px;
-        padding: 12px;
     }
     
     .qr-code-container {
@@ -674,23 +779,21 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
+    .play-store-icon {
+        width: 180px;
+    }
+    
     .qr-code {
         width: 140px;
         height: 140px;
-        padding: 10px;
     }
     
     .qr-code-container {
         width: 100px;
         height: 100px;
     }
-    
-    .qr-code-text {
-        font-size: 12px;
-    }
 }
-
         /* Footer */
         footer {
             background-color: var(--dark-bg);
@@ -1093,25 +1196,24 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <i class="fas fa-mosque"></i>
-                <span>SiratSync</span>
-            </a>
-            <nav class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#screenshots">Screenshots</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#download">Download</a>
-            </nav>
-            <button class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </header>
-
+ <!-- Header -->
+<header>
+    <div class="container header-container">
+        <a href="#" class="logo">
+            <img src="appicon.png" alt="SiratSync App Icon" class="app-icon">
+            <span>SiratSync</span>
+        </a>
+        <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#download">Download</a>
+        </nav>
+        <button class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
@@ -1694,18 +1796,21 @@ SiratSync is easy to use and has all the essential Islamic features in one place
         </div>
     </div>
 </section>
-     <!-- Download Section -->
+      <!-- Download Section -->
     <section class="download-section" id="download">
         <div class="container">
             <h2>Start Your Spiritual Journey Today</h2>
             <p>Download SiratSync now and experience a comprehensive Islamic lifestyle app designed with love for the Ummah</p>
             <div class="download-options">
-                <div class="download-buttons-vertical">
-                    <a href="https://play.google.com/store/apps/details?id=com.islamic.streakly" class="btn btn-primary">
-                        <i class="fab fa-google-play"></i>
-                        Download From Play Store
+                <!-- Official Google Play Store Button -->
+                <div class="play-store-button">
+                    <a href="https://play.google.com/store/apps/details?id=com.islamic.streakly" target="_blank" class="play-store-link">
+                        <div class="play-store-icon">
+    <img src="Google_play.jpeg" alt="Google Play" style="width: 100%; height: 100%;">
+</div>
                     </a>
                 </div>
+                
                 <div class="qr-code">
                     <div class="qr-code-container">
                         <img src="qrcode.png" alt="QR Code to download SiratSync app" class="qr-code-image">
@@ -1975,32 +2080,3 @@ screenshotContainer.addEventListener('mouseleave', () => {
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
