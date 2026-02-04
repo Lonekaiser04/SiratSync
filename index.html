@@ -562,7 +562,25 @@
             background: var(--dark-emerald);
             transform: scale(1.1);
         }
+/* Add to your CSS for better contact link styling */
+.footer-column .footer-links li a:hover {
+    color: var(--gold);
+    padding-left: 5px;
+}
 
+.footer-column .footer-links li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-column .footer-links li a i {
+    width: 20px;
+    text-align: center;
+}
         /* Download Section */
         .download-section {
             background: var(--gradient-emerald);
@@ -1656,20 +1674,20 @@ SiratSync is easy to use and has all the essential Islamic features in one place
                     <h3>SiratSync</h3>
                     <p>Your all-in-one Islamic companion for spiritual growth and consistent worship. Built with simplicity, authenticity, and user comfort in mind.</p>
                     <div class="social-links">
-    <a href="https://www.instagram.com/siratsync?igsh=cDlxem5qaWhnN3Vj" target="_blank">
-        <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://wa.me/919541871382" target="_blank" title="Contact on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://www.facebook.com/share/1eQfmhDGLX/" target="_blank">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.youtube.com/@SiratSync" target="_blank">
-        <i class="fab fa-youtube"></i>
-    </a>
-</div>
-</div>
+                        <a href="https://www.instagram.com/siratsync?igsh=cDlxem5qaWhnN3Vj" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/919541871382" target="_blank" aria-label="WhatsApp" title="Contact on WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1eQfmhDGLX/" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@SiratSync" target="_blank" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
@@ -1692,9 +1710,21 @@ SiratSync is easy to use and has all the essential Islamic features in one place
                 <div class="footer-column">
                     <h3>Contact Us</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> Siratsync@gmail.com</li>
-                        <li><i class="fas fa-phone"></i> +91 954-187-1382</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Kupwara, Jammu and Kashmir</li>
+                        <li>
+                            <a href="mailto:Siratsync@gmail.com" style="color: #ccc; text-decoration: none;">
+                                <i class="fas fa-envelope"></i> Siratsync@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+919541871382" style="color: #ccc; text-decoration: none;">
+                                <i class="fas fa-phone"></i> +91 954-187-1382
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://maps.google.com/?q=Kupwara,Jammu+and+Kashmir" target="_blank" style="color: #ccc; text-decoration: none;">
+                                <i class="fas fa-map-marker-alt"></i> Kupwara, Jammu and Kashmir
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -1892,6 +1922,7 @@ screenshotContainer.addEventListener('mouseleave', () => {
     </script>
 </body>
 </html>
+
 
 
 
