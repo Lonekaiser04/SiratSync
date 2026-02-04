@@ -853,6 +853,126 @@
             }
         }
 
+        /* Testimonials Animation Styles */
+.testimonials-row {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.testimonials-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.forward-row .testimonials-track {
+    animation-name: slideForward;
+}
+
+.backward-row .testimonials-track {
+    animation-name: slideBackward;
+}
+
+/* Adjust animation duration based on content length */
+.forward-row .testimonials-track {
+    animation-duration: 40s;
+}
+
+.backward-row .testimonials-track {
+    animation-duration: 45s;
+}
+
+.testimonial-card {
+    flex: 0 0 350px; /* Fixed width for cards */
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.testimonial-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.author-info h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #111827;
+}
+
+.author-info p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Animation Keyframes */
+@keyframes slideForward {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slideBackward {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Pause animation on hover */
+.testimonials-row:hover .testimonials-track {
+    animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonial-card {
+        flex: 0 0 280px;
+    }
+    
+    .forward-row .testimonials-track {
+        animation-duration: 30s;
+    }
+    
+    .backward-row .testimonials-track {
+        animation-duration: 35s;
+    }
+}
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -1380,15 +1500,18 @@
         </div>
     </div>
 </section>
-
-    <!-- Testimonials Section -->
-    <section class="section testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Loved by the Muslim Community</h2>
-                <p>Join thousands of Muslims who have transformed their spiritual journey with SiratSync</p>
-            </div>
-            <div class="testimonials-grid">
+<!-- Testimonials Section -->
+<section class="section testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-title">
+            <h2>Loved by the Muslim Community</h2>
+            <p>Join thousands of Muslims who have transformed their spiritual journey with SiratSync</p>
+        </div>
+        
+        <!-- First row - moving forward (left to right) -->
+        <div class="testimonials-row forward-row">
+            <div class="testimonials-track">
+                <!-- Original testimonials -->
                 <div class="testimonial-card">
                     <div class="testimonial-text">
                         "SiratSync is amazing. The habit tracking keeps me consistent with my Salah and Quran reading. The beautiful interface makes it a joy to use every day. JazakAllah Khair to the Developer!"
@@ -1401,7 +1524,7 @@
                         </div>
                     </div>
                 </div>
-                 <div class="testimonial-card">
+                <div class="testimonial-card">
                     <div class="testimonial-text">
                         "This is one of the few apps i like at one go, interface is excellent, throughput is nice, loading time is excellent that email login/sign up in this type of apps looks fresh concept. as for as i have got the idea of community, it looks like this app is the social platform related to ibadah/deen. Quranic verses translation verse by verse makes it more user friendly and beautiful. Thank you for such a wonderful app."
                     </div>
@@ -1421,15 +1544,133 @@
                         <div class="author-avatar">Q</div>
                         <div class="author-info">
                             <h4>Qasim Khazir Malik</h4>
-                            <p>Mathematis teacher, Kupwara</p>
+                            <p>Mathematics teacher, Kupwara</p>
                         </div>
                     </div>
                 </div>
-               
+                
+                <!-- Duplicated testimonials for seamless loop -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "SiratSync is amazing. The habit tracking keeps me consistent with my Salah and Quran reading. The beautiful interface makes it a joy to use every day. JazakAllah Khair to the Developer!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">U</div>
+                        <div class="author-info">
+                            <h4>Umer Akbar</h4>
+                            <p>Student, Kupwara</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "This is one of the few apps i like at one go, interface is excellent, throughput is nice, loading time is excellent that email login/sign up in this type of apps looks fresh concept. as for as i have got the idea of community, it looks like this app is the social platform related to ibadah/deen. Quranic verses translation verse by verse makes it more user friendly and beautiful. Thank you for such a wonderful app."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Saqib Ali</h4>
+                            <p>Software Engineer, Kashmir</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "As someone who travels frequently, having accurate prayer times and Qibla direction in one app is invaluable. The offline access to Quran and Hadith is perfect for when I don't have internet. This is the Islamic app I need on my phone."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">Q</div>
+                        <div class="author-info">
+                            <h4>Qasim Khazir Malik</h4>
+                            <p>Mathematics teacher, Kupwara</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-
+        
+        <!-- Second row - moving backward (right to left) -->
+        <div class="testimonials-row backward-row">
+            <div class="testimonials-track">
+                <!-- Original testimonials in reverse order -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "As someone who travels frequently, having accurate prayer times and Qibla direction in one app is invaluable. The offline access to Quran and Hadith is perfect for when I don't have internet. This is the Islamic app I need on my phone."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">Q</div>
+                        <div class="author-info">
+                            <h4>Qasim Khazir Malik</h4>
+                            <p>Mathematics teacher, Kupwara</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "This is one of the few apps i like at one go, interface is excellent, throughput is nice, loading time is excellent that email login/sign up in this type of apps looks fresh concept. as for as i have got the idea of community, it looks like this app is the social platform related to ibadah/deen. Quranic verses translation verse by verse makes it more user friendly and beautiful. Thank you for such a wonderful app."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Saqib Ali</h4>
+                            <p>Software Engineer, Kashmir</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "SiratSync is amazing. The habit tracking keeps me consistent with my Salah and Quran reading. The beautiful interface makes it a joy to use every day. JazakAllah Khair to the Developer!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">U</div>
+                        <div class="author-info">
+                            <h4>Umer Akbar</h4>
+                            <p>Student, Kupwara</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Duplicated testimonials for seamless loop -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "As someone who travels frequently, having accurate prayer times and Qibla direction in one app is invaluable. The offline access to Quran and Hadith is perfect for when I don't have internet. This is the Islamic app I need on my phone."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">Q</div>
+                        <div class="author-info">
+                            <h4>Qasim Khazir Malik</h4>
+                            <p>Mathematics teacher, Kupwara</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "This is one of the few apps i like at one go, interface is excellent, throughput is nice, loading time is excellent that email login/sign up in this type of apps looks fresh concept. as for as i have got the idea of community, it looks like this app is the social platform related to ibadah/deen. Quranic verses translation verse by verse makes it more user friendly and beautiful. Thank you for such a wonderful app."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Saqib Ali</h4>
+                            <p>Software Engineer, Kashmir</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "SiratSync is amazing. The habit tracking keeps me consistent with my Salah and Quran reading. The beautiful interface makes it a joy to use every day. JazakAllah Khair to the Developer!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">U</div>
+                        <div class="author-info">
+                            <h4>Umer Akbar</h4>
+                            <p>Student, Kupwara</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Download Section -->
     <section class="download-section" id="download">
         <div class="container">
@@ -1697,6 +1938,7 @@ screenshotContainer.addEventListener('mouseleave', () => {
     </script>
 </body>
 </html>
+
 
 
 
