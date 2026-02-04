@@ -563,78 +563,6 @@
             transform: scale(1.1);
         }
 
-        /* Testimonials Section */
-        .testimonials {
-            background-color: var(--white);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background-color: var(--white);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            font-size: 80px;
-            color: var(--light-emerald);
-            font-family: 'Amiri', serif;
-            line-height: 1;
-            opacity: 0.5;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            color: var(--text-gray);
-            padding-top: 20px;
-            font-size: 16px;
-            line-height: 1.7;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border-top: 1px solid var(--light-gray);
-            padding-top: 20px;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--gradient-emerald);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 600;
-            font-size: 18px;
-        }
-
-        .author-info h4 {
-            font-size: 18px;
-            margin-bottom: 5px;
-            color: var(--emerald);
-        }
-
-        .author-info p {
-            font-size: 14px;
-            color: #888;
-        }
-
         /* Download Section */
         .download-section {
             background: var(--gradient-emerald);
@@ -939,19 +867,18 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(calc(-100% - 20px)); /* Changed from -50% to -100% */
     }
 }
 
 @keyframes slideBackward {
     0% {
-        transform: translateX(-50%);
+        transform: translateX(calc(-100% - 20px)); /* Changed from -50% to -100% */
     }
     100% {
         transform: translateX(0);
     }
 }
-
 /* Pause animation on hover */
 .testimonials-row:hover .testimonials-track {
     animation-play-state: paused;
@@ -1968,6 +1895,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 </body>
 </html>
+
 
 
 
