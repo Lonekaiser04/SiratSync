@@ -618,27 +618,78 @@
             gap: 20px;
         }
 
-        .qr-code {
-            width: 180px;
-            height: 180px;
-            background-color: var(--white);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--black);
-            font-weight: 600;
-            flex-direction: column;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
+    /* QR Code Styles - Add this to your CSS */
+.qr-code {
+    width: 180px;
+    height: 180px;
+    background-color: var(--white);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    font-weight: 600;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Prevent image from overflowing */
+}
 
-        .qr-code i {
-            font-size: 50px;
-            margin-bottom: 10px;
-            color: var(--emerald);
-        }
+.qr-code-container {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Contain the image */
+    margin-bottom: 10px;
+}
+
+.qr-code-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure image fits without distortion */
+    display: block;
+}
+
+.qr-code-text {
+    font-size: 14px;
+    color: var(--emerald);
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Responsive adjustments for QR code */
+@media (max-width: 768px) {
+    .qr-code {
+        width: 160px;
+        height: 160px;
+        padding: 12px;
+    }
+    
+    .qr-code-container {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .qr-code {
+        width: 140px;
+        height: 140px;
+        padding: 10px;
+    }
+    
+    .qr-code-container {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .qr-code-text {
+        font-size: 12px;
+    }
+}
 
         /* Footer */
         footer {
@@ -1643,7 +1694,7 @@ SiratSync is easy to use and has all the essential Islamic features in one place
         </div>
     </div>
 </section>
-    <!-- Download Section -->
+     <!-- Download Section -->
     <section class="download-section" id="download">
         <div class="container">
             <h2>Start Your Spiritual Journey Today</h2>
@@ -1655,10 +1706,12 @@ SiratSync is easy to use and has all the essential Islamic features in one place
                         Download From Play Store
                     </a>
                 </div>
-          <div class="qr-code">
-        <img src="qrcode.png" alt="QR Code to download SiratSync app" width="140" height="140">
-        <span>Scan to Download</span>
-    </div>
+                <div class="qr-code">
+                    <div class="qr-code-container">
+                        <img src="qrcode.png" alt="QR Code to download SiratSync app" class="qr-code-image">
+                    </div>
+                    <span class="qr-code-text">Scan to Download</span>
+                </div>
             </div>
             <p style="margin-top: 40px; font-size: 16px; opacity: 0.8;">
                 <i class="fas fa-star"></i> 100% Free • No Ads • Privacy Focused • Regular Updates
@@ -1922,6 +1975,7 @@ screenshotContainer.addEventListener('mouseleave', () => {
     </script>
 </body>
 </html>
+
 
 
 
