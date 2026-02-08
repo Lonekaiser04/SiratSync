@@ -11,7 +11,7 @@ SiratSync is a comprehensive Islamic lifestyle application designed to help Musl
 
 ## Live Website
 
-**Primary URL:** https://kaisermohiuddin.github.io/siratsync/
+**Primary URL:** https://siratsync.in
 
 ## Features Showcased
 
